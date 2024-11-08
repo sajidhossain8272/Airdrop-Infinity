@@ -1,21 +1,18 @@
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Nav from "./Nav";
-
+import FeaturedData from "../FeaturedData";
 const Airdrop = () => {
-  const location = useLocation();
-  const item = location.state;
+  const { id } = useParams();  // Use the id from the URL
+  const item = FeaturedData.find((featured) => featured.featured_id === id);  // Find the item by id
 
   if (!item) return <div>No data available</div>;
 
   // Function to convert URLs in a string to <a> tags
   const renderStepWithLinks = (step) => {
-    // Regular expression to match URLs
     const urlPattern = /https?:\/\/[^\s]+/g;
 
-    // Replace all the URLs in the step string with <a> tags
     return step.split(urlPattern).map((part, index, array) => {
       if (index < array.length - 1) {
-        // Match URL and wrap it in <a> tag
         const url = step.match(urlPattern)[index];
         return (
           <span key={index}>
@@ -31,25 +28,24 @@ const Airdrop = () => {
   };
 
   return (
-    <div >
+    <div>
       <Nav />
 
       <div className="p-8">
-      <h1 className="text-4xl font-bold">{item.featured_title}</h1>
-      <img 
-        src={item.featured_image}
-        alt={item.featured_title}
-        className="w-[780px] object-fit my-4"
-      />
-      <p className="text-lg">{item.description}</p>
-      <ul className="mt-4 space-y-2">
-        {item.steps.map((step, idx) => (
-          <li key={idx} className="list-disc ml-5">
-            {/* Render the step with links */}
-            {renderStepWithLinks(step)}
-          </li>
-        ))}
-      </ul>
+        <h1 className="text-4xl font-bold">{item.featured_title}</h1>
+        <img 
+          src={item.featured_image}
+          alt={item.featured_title}
+          className="w-[780px] object-fit my-4"
+        />
+        <p className="text-lg">{item.description}</p>
+        <ul className="mt-4 space-y-2">
+          {item.steps.map((step, idx) => (
+            <li key={idx} className="list-disc ml-5">
+              {renderStepWithLinks(step)}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

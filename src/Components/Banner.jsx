@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import FeaturedData from "../FeaturedData";
-
 const Banner = () => {
-  const data = [...FeaturedData, ...FeaturedData, ...FeaturedData];
+  const data = [...FeaturedData, ...FeaturedData, ...FeaturedData]; // Repeat data for demo purposes
 
   return (
     <div className="overflow-hidden">
@@ -14,8 +13,7 @@ const Banner = () => {
         <div className="flex animate-scroll gap-4">
           {data.map((item, index) => (
             <Link
-              to="/airdrop"
-              state={item}
+              to={`/airdrop/${item.featured_id}`}  // Use dynamic path with featured_id
               key={item.featured_id || index}
               className="card w-56 shadow-2xl hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >

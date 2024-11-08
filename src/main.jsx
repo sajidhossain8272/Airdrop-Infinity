@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/airdrop",
+    path: "/airdrop/:id",
     element: <Airdrop></Airdrop>,
   },
 ]);
