@@ -117,3 +117,35 @@
     transform: translateX(-100%);
   }
 }
+
+/* 
+Gradient Bg-Tailwind
+bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600
+
+*/
+
+
+/* Custom scrollbar style */
+.custom-scrollbar {
+  @apply overflow-x-auto;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px; /* Adjust scrollbar height */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  height: 4px; /* Height of the scrollbar thumb */
+  @apply rounded-lg bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-200; /* Track color */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #7e22ce #e5e7eb; /* Thumb color and track color */
+}

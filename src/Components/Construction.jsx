@@ -2,7 +2,7 @@
 const Construction = () => {
   return (
     <div>
-      <div className='flex justify-center pt-20'>
+      <div className='flex justify-center pt-20 lat-regular'>
         <img width='200' src='./Logo-t-2.png' alt='' />
       </div>
       <div className='flex justify-center pt-2'>

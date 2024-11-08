@@ -8,12 +8,16 @@ const FeaturedData = [
     description:
       "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
     steps: [
-      "Visit https://www.google.com for more details",      "A17 Bionic chip",
+      "https://www.google.com to sign up for Grass Airdrop.",
+      "A17 Bionic chip",
       "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
       "LiDAR Scanner",
       "Up to 2TB storage",
     ],
     availability: true,
+    price: 100,
+    network: "Solana",
+    task: "Registration, Mining, Referral(Not Mandatory), Social",
   },
   {
     featured_id: "f_0002",
@@ -39,7 +43,8 @@ const FeaturedData = [
     category: "telegram",
     description: "Trade seamlessly with real-time data and cutting-edge tools.",
     steps: [
-      "Visit https://www.google.com for more details",      "Real-time data",
+      "Visit https://www.google.com for more details",
+      "Real-time data",
       "Advanced charting tools",
       "Automated trading options",
       "Integrated analytics",
@@ -55,7 +60,8 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",      "Low trading fees",
+      "Visit https://www.google.com for more details",
+      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -71,7 +77,8 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",      "Low trading fees",
+      "Visit https://www.google.com for more details",
+      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -87,7 +94,8 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",      "Low trading fees",
+      "Visit https://www.google.com for more details",
+      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -103,14 +111,15 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",      "Low trading fees",
+      "Visit https://www.google.com for more details",
+      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
     ],
     availability: true,
   },
-   {
+  {
     featured_id: "f_0008",
     featured_title: "Grass",
     featured_image:
@@ -119,7 +128,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",     
+      "Visit https://www.google.com for more details",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -136,7 +145,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",     
+      "Visit https://www.google.com for more details",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -152,14 +161,14 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",     
+      "Visit https://www.google.com for more details",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
     ],
     availability: true,
   },
- 
+
   {
     featured_id: "f_0010",
     featured_title: "Grass",
@@ -169,7 +178,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",     
+      "Visit https://www.google.com for more details",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -185,7 +194,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",     
+      "Visit https://www.google.com for more details",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -201,12 +210,103 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Visit https://www.google.com for more details",     
+      "Visit https://www.google.com for more details",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
     ],
     availability: true,
+  },
+
+  {
+    featured_id: "f_0013",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "featured",
+    description:
+      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    steps: [
+      "Visit https://www.google.com for more details",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage",
+    ],
+    availability: true,
+    price: 100,
+  },
+  {
+    featured_id: "f_0014",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "featured",
+    description:
+      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    steps: [
+      "Visit https://www.google.com for more details",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage",
+    ],
+    availability: true,
+    price: 100,
+  },
+  {
+    featured_id: "f_0015",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "exchange",
+    description:
+      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    steps: [
+      "Visit https://www.google.com for more details",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage",
+    ],
+    availability: true,
+    price: 100,
+  },
+  {
+    featured_id: "f_0016",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "new",
+    description:
+      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    steps: [
+      "Visit https://www.google.com for more details",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage",
+    ],
+    availability: true,
+    price: 100,
+  },
+  {
+    featured_id: "f_0017",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "new",
+    description:
+      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    steps: [
+      "Visit https://www.google.com for more details",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage",
+    ],
+    availability: true,
+    price: 100,
   },
 ];
 
