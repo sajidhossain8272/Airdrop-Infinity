@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import FeaturedData from "../FeaturedData";
 
 const Banner = () => {
-  const data = [...FeaturedData, ...FeaturedData, ...FeaturedData]; 
+  const data = [...FeaturedData, ...FeaturedData, ...FeaturedData];
 
   return (
     <div className="overflow-hidden">
@@ -9,10 +10,12 @@ const Banner = () => {
         Airdrop Infinity – Bringing you the best crypto airdrops, in 2025!
       </h3>
 
-      <div className="lg:w-3/5 lg:ml-96 lg:overflow-hidden  overflow-x-auto">
-        <div className="flex animate-scroll gap-4"> 
+      <div className="lg:w-3/5 lg:ml-96 lg:overflow-hidden overflow-x-auto">
+        <div className="flex animate-scroll gap-4">
           {data.map((item, index) => (
-            <div
+            <Link
+              to="/airdrop"
+              state={item}
               key={item.featured_id || index}
               className="card w-56 shadow-2xl hover:scale-105 transition-transform duration-300 flex-shrink-0"
             >
@@ -28,7 +31,7 @@ const Banner = () => {
                   {item.featured_title}
                 </h2>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

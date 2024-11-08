@@ -8,8 +8,7 @@ const FeaturedData = [
     description:
       "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
     steps: [
-      "6.7-inch Super Retina XDR display",
-      "A17 Bionic chip",
+      "Visit https://www.google.com for more details",      "A17 Bionic chip",
       "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
       "LiDAR Scanner",
       "Up to 2TB storage",
@@ -24,7 +23,7 @@ const FeaturedData = [
     category: "wallet",
     description: "Secure your assets with a top-rated cryptocurrency wallet.",
     steps: [
-      "Supports multiple cryptocurrencies",
+      "Visit https://www.google.com for more details",
       "Advanced security features",
       "User-friendly interface",
       "Backup and recovery options",
@@ -40,8 +39,7 @@ const FeaturedData = [
     category: "trading",
     description: "Trade seamlessly with real-time data and cutting-edge tools.",
     steps: [
-      "Comprehensive market insights",
-      "Real-time data",
+      "Visit https://www.google.com for more details",      "Real-time data",
       "Advanced charting tools",
       "Automated trading options",
       "Integrated analytics",
@@ -57,8 +55,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Instant transactions",
-      "Low trading fees",
+      "Visit https://www.google.com for more details",      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -74,8 +71,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Instant transactions",
-      "Low trading fees",
+      "Visit https://www.google.com for more details",      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -91,8 +87,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Instant transactions",
-      "Low trading fees",
+      "Visit https://www.google.com for more details",      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -108,8 +103,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Instant transactions",
-      "Low trading fees",
+      "Visit https://www.google.com for more details",      "Low trading fees",
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
@@ -125,8 +119,7 @@ const FeaturedData = [
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
-      "Instant transactions",
-      "Low trading fees",
+      "Visit https://www.google.com for more details",     
       "Wide range of currencies",
       "High-level security",
       "24/7 customer support",
