@@ -1,7 +1,7 @@
 const FeaturedData = [
   {
     featured_id: "f_0001",
-    featured_title: "Lorem Ipsum Dolor sit amet",
+    featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
     category: "exchange",
@@ -18,7 +18,7 @@ const FeaturedData = [
   },
   {
     featured_id: "f_0002",
-    featured_title: "Consectetur Adipiscing Elit",
+    featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
     category: "wallet",
@@ -34,7 +34,7 @@ const FeaturedData = [
   },
   {
     featured_id: "f_0003",
-    featured_title: "Vivamus luctus urna sed urna",
+    featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
     category: "trading",
@@ -50,7 +50,75 @@ const FeaturedData = [
   },
   {
     featured_id: "f_0004",
-    featured_title: "Pellentesque habitant morbi tristique",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "exchange",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Instant transactions",
+      "Low trading fees",
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+  {
+    featured_id: "f_0005",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "exchange",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Instant transactions",
+      "Low trading fees",
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+  {
+    featured_id: "f_0006",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "exchange",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Instant transactions",
+      "Low trading fees",
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+  {
+    featured_id: "f_0007",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "exchange",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Instant transactions",
+      "Low trading fees",
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+   {
+    featured_id: "f_0008",
+    featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
     category: "exchange",
