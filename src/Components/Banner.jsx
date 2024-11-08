@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import FeaturedData from "../FeaturedData";
@@ -57,29 +58,65 @@ const Banner = () => {
   );
 };
 
-const CategorySection = ({ title, data }) => (
-  <div className="pl-4 w-full max-w-[400px] lg:max-h-[750px] overflow-y-auto">
-    <h1 className="lato-black mb-4">{title}</h1>
-    <div className="grid gap-4 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
-      {data.slice(0, 4).map(item => (
-        <div key={item.featured_id} className="mb-2 card card-bordered image-full w-full sm:w-80 shadow-xl">
-          <figure>
-            <img src={item.featured_image} alt={item.featured_title} />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">{item.featured_title}</h2>
-            <p>{item.description}</p>
-            <div className="card-actions justify-end">
-              <Link to={`/airdrop/${item.featured_id}`} className="btn btn-primary">
-                View Details
-              </Link>
+const CategorySection = ({ title, data }) => {
+  const [visibleItems, setVisibleItems] = useState(4);  // Initially show 4 items
+  const loaderRef = useRef(null);
+
+  const loadMoreItems = () => {
+    if (visibleItems < data.length) {
+      setVisibleItems(prev => prev + 4);  // Increase visible items by 4 on each scroll
+    }
+  };
+
+  // Infinite scroll using Intersection Observer API
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          loadMoreItems();  // Load more items when the loader element is in view
+        }
+      },
+      { threshold: 1.0 } // Trigger when 100% of the loader is in view
+    );
+
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current); // Observe the loader element
+    }
+
+    return () => {
+      if (loaderRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(loaderRef.current); // Clean up the observer
+      }
+    };
+  }, [visibleItems, data, loadMoreItems]);
+
+  return (
+    <div className="pl-4 w-full max-w-[400px] lg:max-h-[750px] overflow-y-auto">
+      <h1 className="lato-black mb-4">{title}</h1>
+      <div className="grid gap-4 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1 overflow-x-auto">
+        {data.slice(0, visibleItems).map(item => (
+          <div key={item.featured_id} className="mb-2 card card-bordered image-full w-full sm:w-80 shadow-xl">
+            <figure>
+              <img src={item.featured_image} alt={item.featured_title} />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">{item.featured_title}</h2>
+              <p>{item.description}</p>
+              <div className="card-actions justify-end">
+                <Link to={`/airdrop/${item.featured_id}`} className="btn bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 text-white">
+                  Claim Airdrop
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      {/* Loader element for triggering the infinite scroll */}
+      <div ref={loaderRef} className="h-10"></div>
     </div>
-  </div>
-);
+  );
+};
 
 CategorySection.propTypes = {
   title: PropTypes.string.isRequired,
