@@ -45,7 +45,7 @@ const Airdrop = () => {
         <img
           src={item.featured_image}
           alt={item.featured_title}
-          className="w-[780px] object-fit my-4"
+          className="w-[780px] object-fit my-4 shadow-2xl"
         />
         <p className="text-lg">{item.description}</p>
         <ul className="mt-4 space-y-2">
@@ -56,7 +56,7 @@ const Airdrop = () => {
           ))}
         </ul>
       </div>
-      <div className="flex justify-center"><NavLink to="/" className=" btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600">Back to Home</NavLink></div>
+      <div className="flex justify-center lg:justify-start lg:pl-8"><NavLink to="/" className=" btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600">Back to Home</NavLink></div>
     </div>
   );
 };
