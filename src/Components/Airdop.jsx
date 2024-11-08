@@ -1,16 +1,26 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Nav from "./Nav";
-import FeaturedData from "../FeaturedData";
+import FeaturedData from "../FeaturedData"; // Assuming this file contains your data
+
 const Airdrop = () => {
-  const { id } = useParams();  // Use the id from the URL
-  const item = FeaturedData.find((featured) => featured.featured_id === id);  // Find the item by id
+  const { id } = useParams(); // Retrieve the dynamic id from the URL
+  const location = useLocation();
+  const [item, setItem] = useState(location.state); // Set initial state with passed location.state
+
+  useEffect(() => {
+    if (!item) {
+      // If state is not available, find the item from FeaturedData by matching id
+      const foundItem = FeaturedData.find((data) => data.featured_id === id);
+      setItem(foundItem);
+    }
+  }, [id, item]);
 
   if (!item) return <div>No data available</div>;
 
   // Function to convert URLs in a string to <a> tags
   const renderStepWithLinks = (step) => {
     const urlPattern = /https?:\/\/[^\s]+/g;
-
     return step.split(urlPattern).map((part, index, array) => {
       if (index < array.length - 1) {
         const url = step.match(urlPattern)[index];
@@ -30,10 +40,9 @@ const Airdrop = () => {
   return (
     <div>
       <Nav />
-
       <div className="p-8">
         <h1 className="text-4xl font-bold">{item.featured_title}</h1>
-        <img 
+        <img
           src={item.featured_image}
           alt={item.featured_title}
           className="w-[780px] object-fit my-4"
