@@ -1,8 +1,17 @@
-# React + Vite
+# Airdrop Infinity
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Airdrop Infinity** is an upcoming platform designed to enhance user experiences in the world of digital assets and airdrops. Currently under development, this project is built using React and Vite, aiming for a fast and efficient user interface that adapts to both desktop and mobile devices.
 
-Currently, two official plugins are available:
+### Key Features:
+- **Responsive Design**: Optimized layout for various devices.
+- **Modular Components**: Built with reusable and maintainable React components.
+- **High Performance**: Developed with Vite for a rapid development experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technologies:
+- **React** for UI development
+- **Vite** for fast builds and optimized performance
+- **JavaScript (ES6+)** for application logic
+- **Tailwind CSS** *(optional)* for styling and responsive design
+
+### Development Status:
+🚧 **Under Construction** - Core features are being implemented, and additional functionality will be added over time.
