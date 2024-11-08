@@ -20,7 +20,7 @@ const FeaturedData = [
     featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "wallet",
+    category: "featured",
     description: "Secure your assets with a top-rated cryptocurrency wallet.",
     steps: [
       "Visit https://www.google.com for more details",
@@ -36,7 +36,7 @@ const FeaturedData = [
     featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "trading",
+    category: "telegram",
     description: "Trade seamlessly with real-time data and cutting-edge tools.",
     steps: [
       "Visit https://www.google.com for more details",      "Real-time data",
@@ -99,7 +99,7 @@ const FeaturedData = [
     featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "exchange",
+    category: "new",
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
     steps: [
@@ -115,6 +115,39 @@ const FeaturedData = [
     featured_title: "Grass",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "telegram",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Visit https://www.google.com for more details",     
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+
+  {
+    featured_id: "f_0009",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "telegram",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Visit https://www.google.com for more details",     
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+  {
+    featured_id: "f_0010",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
     category: "exchange",
     description:
       "Enjoy fast, reliable exchanges with low fees and high security.",
@@ -127,6 +160,54 @@ const FeaturedData = [
     availability: true,
   },
  
+  {
+    featured_id: "f_0010",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "exchange",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Visit https://www.google.com for more details",     
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+  {
+    featured_id: "f_0011",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "telegram",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Visit https://www.google.com for more details",     
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
+  {
+    featured_id: "f_0012",
+    featured_title: "Grass",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+    category: "telegram",
+    description:
+      "Enjoy fast, reliable exchanges with low fees and high security.",
+    steps: [
+      "Visit https://www.google.com for more details",     
+      "Wide range of currencies",
+      "High-level security",
+      "24/7 customer support",
+    ],
+    availability: true,
+  },
 ];
 
 export default FeaturedData;

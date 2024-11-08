@@ -39,13 +39,13 @@ const Nav = () => {
               <li>
                 <a className="text-lg">Airdrops</a>
                 <ul className="p-2">
-                  <li><a className="text-md">Featured Airdrops</a></li>
-                  <li><a className="text-md">New Airdrops</a></li>
-                  <li><a className="text-md">Exchange Airdrops</a></li>
-                  <li><a className="text-md">Telegram Mini Airdrops</a></li>
+                  <li><NavLink to="/construction" className="text-md">Featured Airdrops</NavLink></li>
+                  <li><NavLink to="/construction" className="text-md">New Airdrops</NavLink></li>
+                  <li><NavLink to="/construction" className="text-md">Exchange Airdrops</NavLink></li>
+                  <li><NavLink to="/construction" className="text-md">Telegram Mini Airdrops</NavLink></li>
                 </ul>
               </li>
-              <li><a>Blogs</a></li>
+              <NavLink to="/construction" >Blogs</NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost lato-bold lg:text-4xl text-xl hover:bg-none">Airdrop</a>
@@ -68,15 +68,15 @@ const Nav = () => {
               <details className="pl-20 pr-20">
                 <summary className="text-lg">Airdrops</summary>
                 <ul className="p-2">
-                  <li><a className="text-md">Featured Airdrops</a></li>
-                  <li><a className="text-md">New Airdrops</a></li>
-                  <li><a className="text-md">Exchange Airdrops</a></li>
-                  <li><a className="text-md">Telegram Mini Airdrops</a></li>
+                  <li><NavLink to="/construction" className="text-md">Featured Airdrops</NavLink></li>
+                  <li><NavLink to="/construction" className="text-md">New Airdrops</NavLink></li>
+                  <li><NavLink to="/construction" className="text-md">Exchange Airdrops</NavLink></li>
+                  <li><NavLink to="/construction" className="text-md">Telegram Mini Airdrops</NavLink></li>
                 </ul>
               </details>
             </li>
             <NavLink
-              to="/blogs"
+              to="/construction"
               className={({ isActive }) =>
                 isActive
                   ? "btn btn-ghost text-lg bg-black text-white"
@@ -89,9 +89,9 @@ const Nav = () => {
         </div>
 
         <div className="navbar-end">
-          <a className="btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600">
+          <NavLink to="/construction" className="btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600">
             Subscribe
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

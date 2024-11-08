@@ -10,7 +10,7 @@ const Construction = () => {
       </div>{" "}
       <br />
       <h2 className=' flex justify-center lg:text-3xl text-xl'>
-        Website is under construction!
+        This page is under construction!
       </h2>
     </div>
   );

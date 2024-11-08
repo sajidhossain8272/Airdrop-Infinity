@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import FeaturedData from "../FeaturedData"; // Assuming this file contains your data
@@ -56,6 +56,7 @@ const Airdrop = () => {
           ))}
         </ul>
       </div>
+      <div className="flex justify-center"><NavLink to="/" className=" btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600">Back to Home</NavLink></div>
     </div>
   );
 };

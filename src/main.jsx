@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Airdrop from './Components/Airdop.jsx';
+import Construction from './Components/Construction.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,13 @@ const router = createBrowserRouter([
     path: "/airdrop/:id",
     element: <Airdrop></Airdrop>,
   },
+
+  {
+    path: "/construction",
+    element: <Construction></Construction>,
+  },
+
+
 ]);
 
 createRoot(document.getElementById('root')).render(
