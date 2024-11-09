@@ -77,16 +77,14 @@ const Nav = () => {
                   </li>
                 </ul>
               </li> */}
-              <NavLink
-                to='/construction'
-                className={({ isActive }) =>
-                  isActive
-                    ? "btn btn-ghost text-lg bg-black text-white"
-                    : "btn btn-ghost text-lg"
-                }
+              <a
+                href='https://medium.com/@airdropinfinity'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='btn btn-ghost text-lg bg-black text-white'
               >
                 Blogs
-              </NavLink>{" "}
+              </a>{" "}
               <NavLink
                 to='/construction'
                 className={({ isActive }) =>
@@ -150,6 +148,14 @@ const Nav = () => {
                 </ul>
               </details>
             </li> */}
+            <a
+              href='https://medium.com/@airdropinfinity'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='btn btn-ghost text-lg bg-black text-white'
+            >
+              Blogs
+            </a>
             <NavLink
               to='/construction'
               className={({ isActive }) =>
@@ -158,18 +164,8 @@ const Nav = () => {
                   : "btn btn-ghost text-lg"
               }
             >
-              Blogs
-            </NavLink>
-            <NavLink
-                to='/construction'
-                className={({ isActive }) =>
-                  isActive
-                    ? "btn btn-ghost text-lg bg-black text-white"
-                    : "btn btn-ghost text-lg"
-                }
-              >
-                Whitepaper
-              </NavLink>{" "}
+              Whitepaper
+            </NavLink>{" "}
           </ul>
         </div>
 
