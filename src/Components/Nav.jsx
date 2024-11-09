@@ -81,7 +81,7 @@ const Nav = () => {
                 href='https://medium.com/@airdropinfinity'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='btn btn-ghost text-lg bg-black text-white'
+                className='btn btn-ghost text-lg'
               >
                 Blogs
               </a>{" "}
@@ -152,7 +152,7 @@ const Nav = () => {
               href='https://medium.com/@airdropinfinity'
               target='_blank'
               rel='noopener noreferrer'
-              className='btn btn-ghost text-lg bg-black text-white'
+              className='btn btn-ghost text-lg'
             >
               Blogs
             </a>
