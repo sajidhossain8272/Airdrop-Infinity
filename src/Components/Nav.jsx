@@ -158,8 +158,8 @@ const Nav = () => {
               Subscribe
             </button>
           ) : (
-            <p className="text-lg font-bold">
-              Welcome, {user.displayName}!
+            <p className="lg:text-lg lg: lato-bold text-sm navbar-end">
+              <span className="lato-black pr-1">Welcome:</span><span className="user-text">{user.displayName}! </span>
             </p>
           )}
         </div>
