@@ -5,13 +5,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCQerdqg4_azt6gFC26yzJwdc9fmb0IVzg",
-  authDomain: "airdrop-infinity.firebaseapp.com",
-  projectId: "airdrop-infinity",
-  storageBucket: "airdrop-infinity.firebasestorage.app",
-  messagingSenderId: "240302471347",
-  appId: "1:240302471347:web:96c76ae6eba1081e5398c6",
-  measurementId: "G-4KTTR97QHT",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
