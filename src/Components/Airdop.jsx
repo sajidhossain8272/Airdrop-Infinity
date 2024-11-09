@@ -42,16 +42,19 @@ const Airdrop = () => {
     <div>
       <Nav></Nav>
       <div className="p-8 lato-regular">
-        <h1 className="text-4xl font-bold flex lg:justify-center">{item.featured_title}</h1>
+        <h1 className="text-4xl lato-black flex lg:justify-start pb-8">{item.featured_title}</h1>
         <div className="lg:flex lg:justify-center gap-10">
-        <img
+        <img 
           src={item.featured_image}
           alt={item.featured_title}
-          className="w-[780px] object-fit my-4 shadow-2xl rounded-3xl"
+          className="w-fixed object-fit my-4 shadow-2xl rounded-3xl"
         />
         <div className="lg:pt-2 border-2 p-4">
-        <p className="text-lg">{item.description}</p>
-        <h2 className="lato-bold">Est. <span className="text-green-500"> ${item.price} </span> </h2>
+        <p className="text-lg">{item.description}</p> <br />
+        <h2 className="lato-bold">Airdrop Est. <span className="text-green-500"> ${item.price} </span> </h2>
+        <h2 className="lato-bold">Listed Price <span className="text-green-500"> ${item.listed_price} </span> </h2><br />
+
+        <h1 className="text-3xl lato-bold">Step-by-Step Guide for {item.featured_title}</h1>
         <h2>{item.availability}</h2>
 
         <ul className="mt-4 space-y-2">

@@ -1,313 +1,116 @@
 const FeaturedData = [
   {
-    featured_id: "f_0001",
-    featured_title: "Grass",
+    featured_id: "Grass_Stage_2_Airdrop_2025",
+    featured_title: "Grass (Stage 2)",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "exchange",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FGrass-Stage-2.webp?alt=media&token=2515246c-51c8-4f1c-a5db-cf590b3d791e",
+      company_logo:"https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2Fgrass.jpg?alt=media&token=d846518f-0a6b-485c-b5c1-3fb56f06e88f",
+    category: "featured",
     description:
-      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+      "Grass Points can be earned in several ways. Currently, users can earn points by downloading and running the Grass desktop app, as well as referring new users.",
+      descriptionS:"users can earn points by downloading and running the Grass desktop app",
     steps: [
-      "https://www.google.com to sign up for Grass Airdrop.",
-      "A17 Bionic chip",
-      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
-      "LiDAR Scanner",
-      "Up to 2TB storage",
+      "Go to the official Grass platform https://app.getgrass.io/register/?referralCode=sSlCpigoGJeZbzM",
+      "Create an account or log in if you already have one.",
+      "Click on the “Connect” button to link your wallet or account.",
+      "Download any necessary extensions or applications, like the Desktop Node, Lite Node (Chrome Extension)",
+      "Follow @getgrass_io on X.",
+      "Like and retweet the official airdrop announcement.",
+      "Share your unique referral link with friends to gain extra points.",
+      "Check the platform’s blog or updates for additional reward opportunities.",
+      "Track your points or rewards within your account dashboard.",
+      "Follow @rairdropinfiniti for regular updates and upcoming opportunities. https://x.com/@airdropinfiniti to follow.",
     ],
     availability: true,
-    price: 100,
+    price: 500,
+    listed_price:3,
     network: "Solana",
-    task: "Registration, Mining, Referral(Not Mandatory), Social",
+    task: "Running Desktop Node(2x earning), Network mining, Referral",
   },
   {
-    featured_id: "f_0002",
-    featured_title: "Grass",
+    featured_id: "Grass_Stage_2_Airdrop_2025",
+    featured_title: "Grass (Stage 2)",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "featured",
-    description: "Secure your assets with a top-rated cryptocurrency wallet.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Advanced security features",
-      "User-friendly interface",
-      "Backup and recovery options",
-      "Customizable display",
-    ],
-    availability: true,
-  },
-  {
-    featured_id: "f_0003",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "telegram",
-    description: "Trade seamlessly with real-time data and cutting-edge tools.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Real-time data",
-      "Advanced charting tools",
-      "Automated trading options",
-      "Integrated analytics",
-    ],
-    availability: true,
-  },
-  {
-    featured_id: "f_0004",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "exchange",
-    description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Low trading fees",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
-    ],
-    availability: true,
-  },
-  {
-    featured_id: "f_0005",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "exchange",
-    description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Low trading fees",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
-    ],
-    availability: true,
-  },
-  {
-    featured_id: "f_0006",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "exchange",
-    description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Low trading fees",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
-    ],
-    availability: true,
-  },
-  {
-    featured_id: "f_0007",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FGrass-Stage-2.webp?alt=media&token=2515246c-51c8-4f1c-a5db-cf590b3d791e",
+      company_logo:"https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2Fgrass.jpg?alt=media&token=d846518f-0a6b-485c-b5c1-3fb56f06e88f",
     category: "new",
     description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
+      "Grass Points can be earned in several ways. Currently, users can earn points by downloading and running the Grass desktop app, as well as referring new users.",
+      descriptionS:"users can earn points by downloading and running the Grass desktop app",
     steps: [
-      "Visit https://www.google.com for more details",
-      "Low trading fees",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
+      "Go to the official Grass platform https://app.getgrass.io/register/?referralCode=sSlCpigoGJeZbzM",
+      "Create an account or log in if you already have one.",
+      "Click on the “Connect” button to link your wallet or account.",
+      "Download any necessary extensions or applications, like the Desktop Node, Lite Node (Chrome Extension)",
+      "Follow @getgrass_io on X.",
+      "Like and retweet the official airdrop announcement.",
+      "Share your unique referral link with friends to gain extra points.",
+      "Check the platform’s blog or updates for additional reward opportunities.",
+      "Track your points or rewards within your account dashboard.",
+      "Follow @rairdropinfiniti for regular updates and upcoming opportunities. https://x.com/@airdropinfiniti to follow.",
     ],
     availability: true,
+    price: 500,
+    listed_price:3,
+    network: "Solana",
+    task: "Running Desktop Node(2x earning), Network mining, Referral",
   },
   {
-    featured_id: "f_0008",
-    featured_title: "Grass",
+    featured_id: "Grass_Stage_2_Airdrop_2025",
+    featured_title: "Grass (Stage 2)",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FGrass-Stage-2.webp?alt=media&token=2515246c-51c8-4f1c-a5db-cf590b3d791e",
+      company_logo:"https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2Fgrass.jpg?alt=media&token=d846518f-0a6b-485c-b5c1-3fb56f06e88f",
     category: "telegram",
     description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
+      "Grass Points can be earned in several ways. Currently, users can earn points by downloading and running the Grass desktop app, as well as referring new users.",
+      descriptionS:"users can earn points by downloading and running the Grass desktop app",
     steps: [
-      "Visit https://www.google.com for more details",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
+      "Go to the official Grass platform https://app.getgrass.io/register/?referralCode=sSlCpigoGJeZbzM",
+      "Create an account or log in if you already have one.",
+      "Click on the “Connect” button to link your wallet or account.",
+      "Download any necessary extensions or applications, like the Desktop Node, Lite Node (Chrome Extension)",
+      "Follow @getgrass_io on X.",
+      "Like and retweet the official airdrop announcement.",
+      "Share your unique referral link with friends to gain extra points.",
+      "Check the platform’s blog or updates for additional reward opportunities.",
+      "Track your points or rewards within your account dashboard.",
+      "Follow @rairdropinfiniti for regular updates and upcoming opportunities. https://x.com/@airdropinfiniti to follow.",
     ],
     availability: true,
-  },
-
-  {
-    featured_id: "f_0009",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "telegram",
-    description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
-    ],
-    availability: true,
+    price: 500,
+    listed_price:3,
+    network: "Solana",
+    task: "Running Desktop Node(2x earning), Network mining, Referral",
   },
   {
-    featured_id: "f_0010",
-    featured_title: "Grass",
+    featured_id: "Grass_Stage_2_Airdrop_2025",
+    featured_title: "Grass (Stage 2)",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FGrass-Stage-2.webp?alt=media&token=2515246c-51c8-4f1c-a5db-cf590b3d791e",
+      company_logo:"https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2Fgrass.jpg?alt=media&token=d846518f-0a6b-485c-b5c1-3fb56f06e88f",
     category: "exchange",
     description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
+      "Grass Points can be earned in several ways. Currently, users can earn points by downloading and running the Grass desktop app, as well as referring new users.",
+      descriptionS:"users can earn points by downloading and running the Grass desktop app",
     steps: [
-      "Visit https://www.google.com for more details",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
+      "Go to the official Grass platform https://app.getgrass.io/register/?referralCode=sSlCpigoGJeZbzM",
+      "Create an account or log in if you already have one.",
+      "Click on the “Connect” button to link your wallet or account.",
+      "Download any necessary extensions or applications, like the Desktop Node, Lite Node (Chrome Extension)",
+      "Follow @getgrass_io on X.",
+      "Like and retweet the official airdrop announcement.",
+      "Share your unique referral link with friends to gain extra points.",
+      "Check the platform’s blog or updates for additional reward opportunities.",
+      "Track your points or rewards within your account dashboard.",
+      "Follow @rairdropinfiniti for regular updates and upcoming opportunities. https://x.com/@airdropinfiniti to follow.",
     ],
     availability: true,
+    price: 500,
+    listed_price:3,
+    network: "Solana",
+    task: "Running Desktop Node(2x earning), Network mining, Referral",
   },
-
-  {
-    featured_id: "f_0010",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "exchange",
-    description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
-    ],
-    availability: true,
-  },
-  {
-    featured_id: "f_0011",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "telegram",
-    description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
-    ],
-    availability: true,
-  },
-  {
-    featured_id: "f_0012",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "telegram",
-    description:
-      "Enjoy fast, reliable exchanges with low fees and high security.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "Wide range of currencies",
-      "High-level security",
-      "24/7 customer support",
-    ],
-    availability: true,
-  },
-
-  {
-    featured_id: "f_0013",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "featured",
-    description:
-      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "A17 Bionic chip",
-      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
-      "LiDAR Scanner",
-      "Up to 2TB storage",
-    ],
-    availability: true,
-    price: 100,
-  },
-  {
-    featured_id: "f_0014",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "featured",
-    description:
-      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "A17 Bionic chip",
-      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
-      "LiDAR Scanner",
-      "Up to 2TB storage",
-    ],
-    availability: true,
-    price: 100,
-  },
-  {
-    featured_id: "f_0015",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "exchange",
-    description:
-      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "A17 Bionic chip",
-      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
-      "LiDAR Scanner",
-      "Up to 2TB storage",
-    ],
-    availability: true,
-    price: 100,
-  },
-  {
-    featured_id: "f_0016",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "new",
-    description:
-      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "A17 Bionic chip",
-      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
-      "LiDAR Scanner",
-      "Up to 2TB storage",
-    ],
-    availability: true,
-    price: 100,
-  },
-  {
-    featured_id: "f_0017",
-    featured_title: "Grass",
-    featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/A8%2Fmaxresdefault.jpg?alt=media&token=8b0f1808-b729-40eb-912b-0584168bcdc8",
-    category: "new",
-    description:
-      "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
-    steps: [
-      "Visit https://www.google.com for more details",
-      "A17 Bionic chip",
-      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultra-wide)",
-      "LiDAR Scanner",
-      "Up to 2TB storage",
-    ],
-    availability: true,
-    price: 100,
-  },
-];
+    ];
 
 export default FeaturedData;
