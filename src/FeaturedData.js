@@ -56,7 +56,34 @@ const FeaturedData = [
     price: 50,
     listed_price: "N/A (Listing on November)",
     network: "Ton ",
-    network_logo: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
+    network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
+    task: "Telegram Mini App, Tap Game, Referral",
+  },
+
+  {
+    featured_id: "Paws_Telegram_App_Airdrop_2025",
+    featured_title: "PAWS",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FPaws-Banner.webp?alt=media&token=8e2f098e-e672-400d-af18-86c8df3b7860",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2FPaws%20Logo.webp?alt=media&token=89a5faf7-554c-4145-983d-3c1773746a9c",
+    category: "telegram",
+    description:
+      "PAWS is a Telegram airdrop bot that rewards you for your activity. Connect your TON wallet, complete quests, and invite friends to earn points. Get a 10% bonus from your friends' points and start earning rewards today!",
+    type: "$PAWS🐾",
+    type2: "Telegram Mini App💎",
+    steps: [
+      "https://t.me/PAWSOG_bot/PAWS?startapp=CPbYdPPI to Open the PAWS🐾 Telegram bot to get started",
+      "Play games within the bot to earn and harvest tomatoes.",
+      "Tap as much as you can to increase your rewards.",
+      "Share your unique referral link with friends to earn extra points and tomatoes.",
+      "https://x.com/@airdropinfiniti to follow @arairdropinfiniti for regular updates and upcoming opportunities.",
+    ],
+    availability: true,
+    price: 100,
+    listed_price: "N/A (Listing on November)",
+    network: "Ton ",
+    network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game, Referral",
   },
 ];
