@@ -103,19 +103,19 @@ const CategorySection = ({ title, data }) => {
   }, [visibleItems, data, loadMoreItems]);
 
   return (
-    <div className='pl-4 w-full max-w-[400px] lg:max-h-[750px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-700 scrollbar-track-gray-300'>
+    <div className='pl-4 w-full max-w-[400px] lg:max-h-[750px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-700 scrollbar-track-gray-300 '>
       <h1 className='lato-black mb-4'>{title}</h1>
       <div className='grid gap-4 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1 overflow-x-auto'>
         {data.slice(0, visibleItems).map((item) => (
           <div
             key={item.featured_id}
-            className='mb-2 card card-bordered image-full w-full sm:w-80 shadow-xl'
+            className=' mb-2 card card-bordered image-full w-full sm:w-80 shadow-xl'
           >
             <figure>
               <img src={item.featured_image} alt={item.featured_title} />
             </figure>
-            <div className='card-body'>
-              <div className='flex justify-between'>
+            <div className='card-body '>
+              <div className='flex justify-between '>
                 <img
                   className='rounded-full'
                   width={35}
@@ -142,7 +142,7 @@ const CategorySection = ({ title, data }) => {
                 </div>
                 <Link
                   to={`/airdrop/${item.featured_id}`}
-                  className='btn w-1/3 bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 text-white'
+                  className='btn w-1/3 bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 text-white hover:scale-105 transition-transform duration-300 flex-shrink-0'
                 >
                   Claim Airdrop
                 </Link>

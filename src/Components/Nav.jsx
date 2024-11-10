@@ -93,7 +93,7 @@ const Nav = () => {
                     : "btn btn-ghost text-lg"
                 }
               >
-                Whitepaper
+                Infinity Drop 🔥
               </NavLink>{" "}
             </ul>
           </div>
@@ -164,7 +164,7 @@ const Nav = () => {
                   : "btn btn-ghost text-lg"
               }
             >
-              Whitepaper
+              Infinity Drop 🔥
             </NavLink>{" "}
           </ul>
         </div>
