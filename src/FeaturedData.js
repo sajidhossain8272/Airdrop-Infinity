@@ -54,7 +54,7 @@ const FeaturedData = [
   price: 50,
   listed_price: "N/A (Listing on November)",
   network: "Ton ",
-  network_logo: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
+  network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
   task: "Telegram Mini App, Tap Game, Referral",
 },
 
