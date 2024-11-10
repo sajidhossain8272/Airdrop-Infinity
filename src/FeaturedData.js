@@ -30,10 +30,10 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
     task: "Running Desktop Node(2x earning), Network mining, Referral",
   },
- //Tomato
+ //Tomarket 
  {
   featured_id: "Tomato_Tomarket_Token_Generation_Event_October_Airdrop",
-  featured_title: "Tomarket - TOMA(tge event)",
+  featured_title: "Tomarket",
   featured_image:
     "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FTomato.webp?alt=media&token=41b24c02-dcf6-400e-9a1f-9efd4822f2a8",
     company_logo:"https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2Ftomato-logo.webp?alt=media&token=65fe6573-2045-448a-a11c-a64059041b91",
