@@ -129,10 +129,16 @@ const CategorySection = ({ title, data }) => {
                 </h3>
               </div>
 
-              <p className='lato-light'>{item.descriptionS}</p>
+              <div className="flex ">
+              <p className='lato-bold'>{item.type}</p>
+
+              <p className='lato-bold'>{item.type2}</p>
+              </div>
+
               <div className='card-actions justify-between'>
-                <div>
-                  <h3 className='lato-regular text-sm'> {item.network}</h3>
+                <div className="flex gap-1">
+                  <h3 className='lato-bold text-sm'>{item.network}</h3>
+                  <img width={15} src={item.network_logo} alt="" />
                 </div>
                 <Link
                   to={`/airdrop/${item.featured_id}`}

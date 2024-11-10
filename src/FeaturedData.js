@@ -8,7 +8,8 @@ const FeaturedData = [
     category: "featured",
     description:
       "Grass Points can be earned in several ways. Currently, users can earn points by downloading and running the Grass desktop app, as well as referring new users.",
-      descriptionS:"users can earn points by downloading and running the Grass desktop app",
+      type:"Stage 2🔥",
+      type2:"Web Mining ⛏️",
     steps: [
       "Go to the official Grass platform https://app.getgrass.io/register/?referralCode=sSlCpigoGJeZbzM",
       "Create an account or log in if you already have one.",
@@ -24,7 +25,8 @@ const FeaturedData = [
     availability: true,
     price: 500,
     listed_price:3,
-    network: "Solana",
+    network: "Solana ",
+    network_logo: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
     task: "Running Desktop Node(2x earning), Network mining, Referral",
   },
   {
