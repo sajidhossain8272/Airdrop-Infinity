@@ -46,7 +46,7 @@ const FeaturedData = [
     type2: "Telegram Mini App💎",
     steps: [
       "https://t.me/Tomarket_ai_bot/app?startapp=0000hpdo to Open the Tomarket Telegram bot to get started",
-      "Play games within the bot to earn and harvest tomatoes.",
+      "Play tap games within the bot to earn PAWS.",
       "Collect as many tomatoes as possible to increase your rewards.",
       "Share your unique referral link with friends to earn extra points and tomatoes.",
       "https://x.com/@airdropinfiniti to follow @arairdropinfiniti for regular updates and upcoming opportunities.",
