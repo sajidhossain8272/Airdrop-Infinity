@@ -59,7 +59,7 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game, Referral",
   },
-
+//PAWS
   {
     featured_id: "Paws_Telegram_App_Airdrop_2025",
     featured_title: "PAWS",
@@ -74,8 +74,8 @@ const FeaturedData = [
     type2: "Telegram Mini App💎",
     steps: [
       "https://t.me/PAWSOG_bot/PAWS?startapp=CPbYdPPI to Open the PAWS🐾 Telegram bot to get started",
-      "Play games within the bot to earn and harvest tomatoes.",
-      "Tap as much as you can to increase your rewards.",
+      "PAWS will give rewards based on your Telegram historic usage",
+      "Do simple social tasks on the bot to increase your rewards.",
       "Share your unique referral link with friends to earn extra points and tomatoes.",
       "https://x.com/@airdropinfiniti to follow @arairdropinfiniti for regular updates and upcoming opportunities.",
     ],
