@@ -40,6 +40,10 @@ const Banner = () => {
                 <h2 className='card-title text-center text-sm truncate'>
                   {item.featured_title}
                 </h2>
+                <div className="flex">
+                <h3>{item.type}</h3>
+                <h3>{item.type2}</h3>
+                </div>
               </div>
             </Link>
           ))}
@@ -109,11 +113,13 @@ const CategorySection = ({ title, data }) => {
         {data.slice(0, visibleItems).map((item) => (
           <div
             key={item.featured_id}
-            className=' mb-2 card card-bordered image-full w-full sm:w-80 shadow-xl'
+            className=' mb-2 card card-bordered w-full sm:w-80 shadow-xl'
           >
+            <Link to={`/airdrop/${item.featured_id}`}>
             <figure>
-              <img src={item.featured_image} alt={item.featured_title} />
+              <img className="hover:scale-105 transition-transform duration-300 flex-shrink-0" src={item.featured_image} alt={item.featured_title} />
             </figure>
+            </Link>
             <div className='card-body '>
               <div className='flex justify-between '>
                 <img
