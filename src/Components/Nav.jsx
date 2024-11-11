@@ -86,7 +86,7 @@ const Nav = () => {
                 Blogs
               </a>{" "}
               <NavLink
-                to='/construction'
+                to='/InfinityDrop'
                 className={({ isActive }) =>
                   isActive
                     ? "btn btn-ghost text-lg bg-black text-white"
@@ -157,7 +157,7 @@ const Nav = () => {
               Blogs
             </a>
             <NavLink
-              to='/construction'
+              to='/InfinityDrop'
               className={({ isActive }) =>
                 isActive
                   ? "btn btn-ghost text-lg bg-black text-white"

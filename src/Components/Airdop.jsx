@@ -1,10 +1,11 @@
 import { NavLink, useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Nav from "./Nav";
-import FeaturedData from "../FeaturedData"; // Assuming this file contains your data
+import FeaturedData from "../FeaturedData"; 
 import Footer from "./Footer";
 import { Title, Meta } from "react-head";
 import { HeadProvider } from "react-head";
+import { Helmet } from "react-helmet-async";
 
 const Airdrop = () => {
   const { id } = useParams(); // Retrieve the dynamic id from the URL
@@ -52,8 +53,10 @@ const Airdrop = () => {
   };
 
   return (
+  
     <HeadProvider>
       <div>
+        <Helmet> <title>Airdrop Infinity | {item.featured_title}</title></Helmet>
         <Nav />
         <div className='p-8 lato-regular'>
           {/* Set the dynamic page title */}
