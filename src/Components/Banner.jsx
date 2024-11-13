@@ -107,6 +107,7 @@ const CategorySection = ({ title, data }) => {
   }, [visibleItems, data, loadMoreItems]);
 
   return (
+    
     <div className='pl-4 w-full max-w-[400px] lg:max-h-[750px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-700 scrollbar-track-gray-300 '>
       <h1 className='lato-black mb-4'>{title}</h1>
       <div className='grid gap-4 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1 overflow-x-auto'>
@@ -117,7 +118,7 @@ const CategorySection = ({ title, data }) => {
           >
             <Link to={`/airdrop/${item.featured_id}`}>
             <figure>
-              <img className="hover:scale-105 transition-transform duration-300 flex-shrink-0" src={item.featured_image} alt={item.featured_title} />
+              <img className="hover:scale-105 transition-transform duration-300 flex-shrink-0 rounded-lg" src={item.featured_image} alt={item.featured_title} />
             </figure>
             </Link>
             <div className='card-body '>

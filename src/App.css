@@ -85,7 +85,7 @@
 .animate-scroll {
   display: flex;
   width: calc(100% * 3);
-  animation: scroll 60s linear infinite;
+  animation: scroll 180s linear infinite;
 }
 
 @media (max-width: 1024px) {
@@ -117,6 +117,9 @@
     transform: translateX(-100%);
   }
 }
+
+
+
 
 /* 
 Gradient Bg-Tailwind
