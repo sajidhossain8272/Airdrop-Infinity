@@ -12,7 +12,8 @@ function App() {
         <title>
           Airdrop Infinity | Bringing you the best crypto airdrops, in 2025!
         </title>
-        
+
+        {/* Structured Data */}
         <script type='application/ld+json'>
           {`
         {
@@ -30,11 +31,22 @@ function App() {
         }
         `}
         </script>
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6MTC1KSSG"></script>
+        <script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-V6MTC1KSSG');
+          `}
+        </script>
       </Helmet>
       <HeadProvider>
-        <Nav></Nav>
-        <Banner></Banner>
-        <Footer></Footer>
+        <Nav />
+        <Banner />
+        <Footer />
       </HeadProvider>
     </>
   );
