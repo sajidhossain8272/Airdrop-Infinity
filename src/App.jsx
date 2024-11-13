@@ -19,7 +19,7 @@ function App() {
           "@type": "Organization",
           "name": "Airdrop Infinity",
           "url": "https://www.airdropinfinity.com/",
-          "logo": "/Logo-t.png",
+          "logo": "../public/Logo-t.png",
           "description": "Airdrop Infinity – Bringing you the best crypto airdrops, in 2025! Discover and claim top cryptocurrency airdrops from various blockchain projects.",
           "sameAs": [
             "https://x.com/airdropinfiniti",
