@@ -12,6 +12,7 @@ function App() {
         <title>
           Airdrop Infinity | Bringing you the best crypto airdrops, in 2025!
         </title>
+        
         <script type='application/ld+json'>
           {`
         {
