@@ -148,7 +148,7 @@ const FeaturedData = [
     featured_id: "Major_Telegram_Mini_App_2025_airdrop",
     featured_title: "Major",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FMajor-Banner.webp?alt=media&token=4ff6064c-1fae-4ead-a70b-e388cb458396",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FMajor%20Banner.webp?alt=media&token=32136d90-fddf-4ac4-aeec-e279ce8f21e8",
     company_logo:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2FMajor-Logo.webp?alt=media&token=6071bb04-89de-4c37-b576-1b84fed73c9c",
     category: "telegram",
