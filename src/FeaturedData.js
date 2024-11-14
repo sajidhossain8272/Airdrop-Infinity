@@ -59,7 +59,7 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game, Referral",
   },
-//PAWS
+  //PAWS
   {
     featured_id: "Paws_Telegram_App_Airdrop_2025",
     featured_title: "PAWS",
@@ -86,8 +86,34 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game, Referral",
   },
-
-
+  // Binance Moonbix
+  {
+    featured_id: "Binance_Moonbix_Telegram_Mini_App_2025_Biggest_airdrop",
+    featured_title: "Binance Moonbix",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FMoonbix.webp?alt=media&token=42ed6537-6fc8-4697-b933-cdd27981679b",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2FBiannce%20Moondbix.webp?alt=media&token=c33d52ea-fad5-4a87-b132-7bc383373236",
+    category: "telegram",
+    description:
+      "Join the Moonbix Journey! Get 1000 Coins as a new player and stay tuned for exciting airdrops and special rewards from Binance!",
+    type: "$MOONBIX🌕",
+    type2: "Telegram Mini App💎",
+    steps: [
+      "https://t.me/Binance_Moonbix_bot/start?startapp=ref_6778293425&startApp=ref_6778293425 to open the Binance Moonbix Telegram bot to get started",
+      "Play moon grabbing games within the bot to earn MOONBIX.",
+      "Collect as many Moon points as possible to increase your rewards.",
+      "Share your unique referral link with friends to earn extra points and tomatoes.",
+      "https://x.com/@airdropinfiniti to follow @arairdropinfiniti for regular updates and upcoming opportunities.",
+      "https://x.com/@binance to Visit Binance’s official twitter",
+    ],
+    availability: true,
+    price: 500,
+    listed_price: "N/A (Listing Soon)",
+    network: "Binance Smart Chain ",
+    network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
+    task: "Telegram Mini App, Tap Game, Referral",
+  },
 ];
 
 export default FeaturedData;
