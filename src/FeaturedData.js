@@ -128,7 +128,7 @@ const FeaturedData = [
     type: "$BLUM",
     type2: "Telegram Mini App💎",
     steps: [
-    "https://t.me/blum/app?startapp=ref_MJEMxZecfN to open the Blum Telegram bot to get started",
+      "https://t.me/blum/app?startapp=ref_MJEMxZecfN to open the Blum Telegram bot to get started",
       "Play drop games within the bot to earn Blum points.",
       "Collect as many Blum points as possible to increase your rewards by checking in daily and claiming blum points every day. ",
       "Share your unique referral link with friends to earn extra blum points.",
@@ -143,9 +143,33 @@ const FeaturedData = [
     task: "Telegram Mini App, Tap Game, Referral",
   },
 
-
-
-
+  // Major
+  {
+    featured_id: "Blum_Telegram_Mini_App_2025_airdrop",
+    featured_title: "Blum",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FMajor-Banner.webp?alt=media&token=4ff6064c-1fae-4ead-a70b-e388cb458396",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2FMajor-Logo.webp?alt=media&token=6071bb04-89de-4c37-b576-1b84fed73c9c",
+    category: "telegram",
+    description:
+      "Join the Major Airdrop! Get $Major points as a new player, claim $Major points every day by hold game, drop game and complete various social tasks to receive exciting rewards",
+    type: "$MAJOR",
+    type2: "Telegram Mini App💎",
+    steps: [
+      "https://t.me/major/start?startapp=6778293425 to open the Blum Telegram bot to get started",
+      "Play drop games within the bot to earn Blum points.",
+      "Collect as many Blum points as possible to increase your rewards by checking in daily and claiming blum points every day. ",
+      "Share your unique referral link with friends to earn extra blum points.",
+      "https://x.com/@airdropinfiniti and @arairdropinfiniti for regular updates and upcoming opportunities.",
+    ],
+    availability: true,
+    price: 250,
+    listed_price: "$1.5 (Pre Market)",
+    network: "TON",
+    network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
+    task: "Telegram Mini App, Tap Game,Social Tasks. Referral Tasks",
+  },
 ];
 
 export default FeaturedData;
