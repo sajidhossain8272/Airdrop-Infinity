@@ -172,71 +172,63 @@ const FeaturedData = [
   },
 
   // Binance
-{
-  featured_id: "How_to_sign_up_and_verify_your_account_on_binance_kyc_binance_referral_program",
-  featured_title: "Binance",
-  featured_image:
-    "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%20banner.webp?alt=media&token=5c99a777-6ac9-4eaf-968d-a20d2c4216b4",
-  company_logo:
-    "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBinance.webp?alt=media&token=7f2e9398-73f8-41cf-ae3b-0cd1837c0c5d",
-  category: "exchange",
-  description:
-    "Refer Friends. Earn Crypto Together. Earn up to 40% commission on every trade across Binance Spot, Futures, and Pool.",
-  type: "$USD👑",
-  type2: "Crypto Exchange",
-  steps: [
-    "https://accounts.binance.com/register?ref=LZPXAPM5 to Register/Sign Up using your email or phone..",
-    "Enter referral code 'LZPXAPM5' during sign up to receive 10% rewards from Airdrop Infinity.",
-    "Verify your account by entering the code sent to your email or SMS.",
-    "Enable 2FA (Google Authenticator or SMS) for added security.",
-    "Begin KYC by going to Profile and selecting Verify and Enter your personal information (name, date of birth, etc.).",
-    "Upload clear photos of your ID (passport, driver’s license, or ID card).",
-    "Complete face verification by scanning your face as instructed.",
-    "Wait for approval and a notification confirming verification.",
-    "Start trading once verification is approved!",
-  ],
-  availability: true,
-  price: "upto 40%",
-  listed_price: "commission based",
-  network: "Binance",
-  network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
-  task: "Referral Tasks, Exchange Tasks",
-},
-// Binance $1000 USDC
-{
-  featured_id: "Binance_$1000_USDC_giveaway_referral_program_earn_together",
-  featured_title: "Binance",
-  featured_image:
-    "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%201000USDC.png?alt=media&token=404636bd-50de-4027-aab6-383bf402387c",
-  company_logo:
-    "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBinance.webp?alt=media&token=7f2e9398-73f8-41cf-ae3b-0cd1837c0c5d",
-  category: "new",
-  description:
-    "EARN TOGETHER Unlock Up to 1,000 USDC Each!",
-  type: "$USD👑",
-  type2: "Crypto Exchange",
-  steps: [ "https://www.binance.com/activity/referral-entry/CPA/together-v4?hl=en&ref=CPA_00N4DZGEHJ to register to Binance the #1 crypto exchange and complete KYC",
-            "Invite friends to register and complete KYC.", 
-            "Have your referred friends complete their first single trade worth >$100 via Spot or Convert.",
-            "https://www.airdropinfinity.com/airdrop/How_to_sign_up_and_verify_your_account_on_binance_kyc_binance_referral_program to view how to sign up on binance and complete kyc - step by step process for beginners.",
-            "Follow [@airdropinfiniti on X (Twitter)](https://x.com/@airdropinfiniti) for regular updates and upcoming opportunities.",
-
-  ],
-  availability: true,
-  price: 1000,
-  listed_price: "1",
-  network: "Binance",
-  network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
-  task: "Referral Tasks, Exchange Tasks",
-}
-
-
-
-
-
-
-
-
+  {
+    featured_id:
+      "How_to_sign_up_and_verify_your_account_on_binance_kyc_binance_referral_program",
+    featured_title: "Binance",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%20banner.webp?alt=media&token=5c99a777-6ac9-4eaf-968d-a20d2c4216b4",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBinance.webp?alt=media&token=7f2e9398-73f8-41cf-ae3b-0cd1837c0c5d",
+    category: "exchange",
+    description:
+      "Refer Friends. Earn Crypto Together. Earn up to 40% commission on every trade across Binance Spot, Futures, and Pool.",
+    type: "$USD👑",
+    type2: "Crypto Exchange",
+    steps: [
+      "https://accounts.binance.com/register?ref=LZPXAPM5 to Register/Sign Up using your email or phone..",
+      "Enter referral code 'LZPXAPM5' during sign up to receive 10% rewards from Airdrop Infinity.",
+      "Verify your account by entering the code sent to your email or SMS.",
+      "Enable 2FA (Google Authenticator or SMS) for added security.",
+      "Begin KYC by going to Profile and selecting Verify and Enter your personal information (name, date of birth, etc.).",
+      "Upload clear photos of your ID (passport, driver’s license, or ID card).",
+      "Complete face verification by scanning your face as instructed.",
+      "Wait for approval and a notification confirming verification.",
+      "Start trading once verification is approved!",
+    ],
+    availability: true,
+    price: "upto 40%",
+    listed_price: "commission based",
+    network: "Binance",
+    network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
+    task: "Referral Tasks, Exchange Tasks",
+  },
+  // Binance $1000 USDC
+  {
+    featured_id: "Binance_$1000_USDC_giveaway_referral_program_earn_together",
+    featured_title: "Binance",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%201000USDC.png?alt=media&token=404636bd-50de-4027-aab6-383bf402387c",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBinance.webp?alt=media&token=7f2e9398-73f8-41cf-ae3b-0cd1837c0c5d",
+    category: "new",
+    description: "EARN TOGETHER Unlock Up to 1,000 USDC Each!",
+    type: "$USD👑",
+    type2: "Crypto Exchange",
+    steps: [
+      "https://www.binance.com/activity/referral-entry/CPA/together-v4?hl=en&ref=CPA_00N4DZGEHJ to register to Binance the #1 crypto exchange and complete KYC",
+      "Invite friends to register and complete KYC.",
+      "Have your referred friends complete their first single trade worth >$100 via Spot or Convert.",
+      "https://www.airdropinfinity.com/airdrop/How_to_sign_up_and_verify_your_account_on_binance_kyc_binance_referral_program to view how to sign up on binance and complete kyc - step by step process for beginners.",
+      "Follow [@airdropinfiniti on X (Twitter)](https://x.com/@airdropinfiniti) for regular updates and upcoming opportunities.",
+    ],
+    availability: true,
+    price: 1000,
+    listed_price: "1",
+    network: "Binance",
+    network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
+    task: "Referral Tasks, Exchange Tasks",
+  },
 ];
 
 export default FeaturedData;
