@@ -208,7 +208,7 @@ const FeaturedData = [
     featured_id: "Binance_$1000_USDC_giveaway_referral_program_earn_together",
     featured_title: "Binance",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%201000USDC.png?alt=media&token=404636bd-50de-4027-aab6-383bf402387c",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%201000USDC%20(1).webp?alt=media&token=57b37522-6cd2-4f9b-9627-2cc0a9a5416f",
     company_logo:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBinance.webp?alt=media&token=7f2e9398-73f8-41cf-ae3b-0cd1837c0c5d",
     category: "new",
