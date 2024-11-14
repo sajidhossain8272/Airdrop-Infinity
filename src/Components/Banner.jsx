@@ -66,7 +66,7 @@ const Banner = () => {
         <CategorySection title='Telegram Airdrops' data={telegramData} />
 
         {/* Exchange Airdrops */}
-        <CategorySection title='Exchange Airdrops' data={exchangeData} />
+        <CategorySection title='Exchange Referral Programs' data={exchangeData} />
       </div>
     </div>
   );
