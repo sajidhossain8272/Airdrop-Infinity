@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { signInWithGoogle } from "../firebase"; // Ensure correct import path
 
 const Nav = () => {
@@ -97,15 +97,17 @@ const Nav = () => {
               </NavLink>{" "}
             </ul>
           </div>
-          <a className='lato-bold lg:text-4xl text-xl hover:cursor-none pr-2'>
+          <Link to="/" className='lato-bold lg:text-4xl text-xl pr-2 hover:cursor-pointer'>
             Airdrop
-          </a>
+          </Link>
+          <Link to="/">
           <img
             className='w-16 pt-1'
             width='100'
             src='/Logo-t-2.png'
             alt='Logo'
           />
+          </Link>
         </div>
 
         {/* Navbar Center */}
