@@ -177,7 +177,7 @@ const FeaturedData = [
       "How_to_sign_up_and_verify_your_account_on_binance_kyc_binance_referral_program",
     featured_title: "Binance",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%20banner.webp?alt=media&token=5c99a777-6ac9-4eaf-968d-a20d2c4216b4",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2Fbinance%20banner%202.webp?alt=media&token=d9894a8f-fc48-41eb-993f-672d3b27b68a",
     company_logo:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBinance.webp?alt=media&token=7f2e9398-73f8-41cf-ae3b-0cd1837c0c5d",
     category: "exchange",
