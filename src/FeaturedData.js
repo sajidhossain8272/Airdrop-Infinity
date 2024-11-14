@@ -114,6 +114,36 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game, Referral",
   },
+   // Blum
+   {
+    featured_id: "Blum_Telegram_Mini_App_2025_airdrop",
+    featured_title: "Blum",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBlumBanner.webp?alt=media&token=e70f7852-24f0-4767-9580-5ae15c059b18",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2FBlum.webp?alt=media&token=8dc0509f-ff5e-4479-91e4-885a33c0789c",
+    category: "telegram",
+    description:
+      "Join the Blum Airdrop! Get Blum points as a new player, claim blum points every day and play telegram drop game to receive exciting rewards",
+    type: "$BLUM",
+    type2: "Telegram Mini App💎",
+    steps: [
+    "https://t.me/blum/app?startapp=ref_MJEMxZecfN to open the Blum Telegram bot to get started",
+      "Play drop games within the bot to earn Blum points.",
+      "Collect as many Blum points as possible to increase your rewards by checking in daily and claiming blum points every day. ",
+      "Share your unique referral link with friends to earn extra blum points.",
+      "https://x.com/@airdropinfiniti and @arairdropinfiniti for regular updates and upcoming opportunities.",
+      "https://x.com/@blumcrypto and follow Blum’s official twitter page.",
+    ],
+    availability: true,
+    price: 200,
+    listed_price: "N/A (Listing Soon)",
+    network: "TON",
+    network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
+    task: "Telegram Mini App, Tap Game, Referral",
+  },
+
+
 ];
 
 export default FeaturedData;
