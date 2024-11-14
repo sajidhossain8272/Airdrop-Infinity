@@ -114,12 +114,12 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game, Referral",
   },
-   // Blum
-   {
+  // Blum
+  {
     featured_id: "Blum_Telegram_Mini_App_2025_airdrop",
     featured_title: "Blum",
     featured_image:
-      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBlumBanner.webp?alt=media&token=e70f7852-24f0-4767-9580-5ae15c059b18",
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBlumBanner.webp?alt=media&token=54acf07c-cd92-4681-9626-1309796ca7d3",
     company_logo:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2FBlum.webp?alt=media&token=8dc0509f-ff5e-4479-91e4-885a33c0789c",
     category: "telegram",
@@ -142,6 +142,8 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game, Referral",
   },
+
+
 
 
 ];
