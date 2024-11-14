@@ -36,7 +36,7 @@ function App() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-V6MTC1KSSG');
+            gtag('config', 'G-4KTTR97QHT');
           `}
         </script>
       </Helmet>
