@@ -89,7 +89,7 @@ const FeaturedData = [
   // Binance Moonbix
   {
     featured_id: "Binance_Moonbix_Telegram_Mini_App_2025_Biggest_airdrop",
-    featured_title: "Binance Moonbix",
+    featured_title: "Moonbix",
     featured_image:
       "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FMoonbix.webp?alt=media&token=42ed6537-6fc8-4697-b933-cdd27981679b",
     company_logo:
@@ -105,7 +105,7 @@ const FeaturedData = [
       "Collect as many Moon points as possible to increase your rewards.",
       "Share your unique referral link with friends to earn extra points and tomatoes.",
       "https://x.com/@airdropinfiniti to follow @arairdropinfiniti for regular updates and upcoming opportunities.",
-      "https://x.com/@binance to Visit Binance’s official twitter",
+      "https://x.com/@binance to Follow Binance’s official twitter",
     ],
     availability: true,
     price: 500,

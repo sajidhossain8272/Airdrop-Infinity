@@ -41,8 +41,8 @@ const Banner = () => {
                   {item.featured_title}
                 </h2>
                 <div className="flex">
-                <h3>{item.type}</h3>
-                <h3>{item.type2}</h3>
+                <h3 className="text-xs">{item.type}</h3>
+                <h3 className="text-xs">{item.type2}</h3>
                 </div>
               </div>
             </Link>
