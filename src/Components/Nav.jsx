@@ -83,7 +83,7 @@ const Nav = () => {
                 rel='noopener noreferrer'
                 className='btn btn-ghost text-lg'
               >
-                Blogs
+                Medium
               </a>{" "}
               <NavLink
                 to='/InfinityDrop'
@@ -156,7 +156,7 @@ const Nav = () => {
               rel='noopener noreferrer'
               className='btn btn-ghost text-lg'
             >
-              Blogs
+              Medium
             </a>
             <NavLink
               to='/InfinityDrop'
