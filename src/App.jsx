@@ -4,6 +4,8 @@ import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
 import { HeadProvider } from "react-head";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 
 function App() {
   return (
@@ -44,6 +46,7 @@ function App() {
         <Nav />
         <Banner />
         <Footer />
+        <SpeedInsights />
       </HeadProvider>
     </>
   );
