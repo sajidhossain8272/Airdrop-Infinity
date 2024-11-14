@@ -165,7 +165,7 @@ const FeaturedData = [
     ],
     availability: true,
     price: 250,
-    listed_price: "$1.5 (Pre Market)",
+    listed_price: "1.5 (Pre Market)",
     network: "TON",
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game,Social Tasks. Referral Tasks",
