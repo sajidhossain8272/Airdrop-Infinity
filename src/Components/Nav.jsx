@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { signInWithGoogle } from "../firebase"; // Ensure correct import path
+import { FaReadme } from "react-icons/fa";
 
 const Nav = () => {
   const [user, setUser] = useState(null); // State to store user info
@@ -83,7 +84,7 @@ const Nav = () => {
                 rel='noopener noreferrer'
                 className='btn btn-ghost text-lg'
               >
-                Medium
+                Medium <FaReadme />
               </a>{" "}
               <NavLink
                 to='/InfinityDrop'
@@ -156,7 +157,7 @@ const Nav = () => {
               rel='noopener noreferrer'
               className='btn btn-ghost text-lg'
             >
-              Medium
+              Medium <FaReadme />
             </a>
             <NavLink
               to='/InfinityDrop'
