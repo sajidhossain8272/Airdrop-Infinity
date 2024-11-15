@@ -69,10 +69,10 @@ const Airdrop = () => {
             <img 
               src={item.featured_image}
               alt={item.featured_title}
-              className='w-fixed object-fit my-4 shadow-2xl rounded-3xl lg:w-[1280px] lg:h-[720px]'
+              className='w-fixed object-fit my-4 shadow-2xl rounded-3xl lg:w-[1280px] lg:h-[720px] '
             />
             <div className='lg:pt-2 border-2 p-4'>
-              <p className='text-lg'>{item.description}</p> <br />
+              <p className='text-lg  lg:w-[500px]'>{item.description}</p> <br />
               <h2 className='lato-bold'>
                 Airdrop Est.{" "}
                 <span className='text-green-500'> ${item.price} </span>{" "}
