@@ -229,6 +229,39 @@ const FeaturedData = [
     network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
     task: "Referral Tasks, Exchange Tasks",
   },
+
+  // Bybit
+  {
+    featured_id:
+      "How_to_sign_up_and_verify_your_account_on_bybit_complete_kyc_bybit_referral_program",
+    featured_title: "Bybit",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FBybit-banner.webp?alt=media&token=a51d8dff-f671-453e-937f-d7023cb0e77a",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FCompany%20Logo%2Fbybit.webp?alt=media&token=56c5d6fe-f7f9-463d-b890-6b085c4a0ece",
+    category: "exchange",
+    description:
+      "Sign up for a Bybit account and claim exclusive rewards from the Bybit referral program! Plus, claim up to 6045 USDT bonus.",
+    type: "$USD👑",
+    type2: "Crypto Exchange",
+    steps: [
+      "https://www.bybit.com/invite?ref=RX0WA2 to Register/Sign Up using your email or phone.",
+      "Enter referral code 'RX0WA2' during sign up to receive upto $6045 rewards from Airdrop Infinity.",
+      "Verify your account by entering the code sent to your email or SMS.",
+      "Enable 2FA (Google Authenticator or SMS) for added security.",
+      "Begin KYC by going to Profile and selecting Verify and Enter your personal information (name, date of birth, etc.).",
+      "Upload clear photos of your ID (passport, driver’s license, or ID card).",
+      "Complete face verification by scanning your face as instructed.",
+      "Wait for approval and a notification confirming verification.",
+      "Start trading once verification is approved!",
+    ],
+    availability: true,
+    price: "6,045",
+    listed_price: "commission based",
+    network: "Bybit",
+    network_logo: "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=035",
+    task: "Referral Tasks, Exchange Tasks",
+  },
 ];
 
 export default FeaturedData;
