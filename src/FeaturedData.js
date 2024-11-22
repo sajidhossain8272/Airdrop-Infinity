@@ -304,7 +304,7 @@ const FeaturedData = [
     category: "featured",
     description:
       "Global AI training and development platform, providing a decentralized ecosystem for users to own and access revolutionary AI models.",
-    type: "$BLESS👑",
+    type: "$NODE",
     type2: "Network Mining",
     steps: [
       "https://app.nodepay.ai/register?ref=AG6dNKimwe5P8JR to register to Nodepay",
