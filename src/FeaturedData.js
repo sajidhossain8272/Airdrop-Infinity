@@ -25,7 +25,7 @@ const FeaturedData = [
       "Follow @rairdropinfiniti for regular updates and upcoming opportunities. https://x.com/@airdropinfiniti to follow.",
     ],
     availability: true,
-    price: 500,
+    price: 5000,
     listed_price: 3,
     network: "Solana ",
     network_logo: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
