@@ -30,6 +30,7 @@ const FeaturedData = [
     network: "Solana ",
     network_logo: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
     task: "Running Desktop Node(2x earning), Network mining, Referral",
+    status: "listed (phase 2 ongoing)"
   },
   //Tomarket
   {
@@ -169,7 +170,7 @@ const FeaturedData = [
     network: "TON",
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game,Social Tasks. Referral Tasks",
-    status: "(Token's Allocated )"
+    status: "(Token's Allocated )",
   },
 
   // Binance
@@ -262,6 +263,35 @@ const FeaturedData = [
     network: "Bybit",
     network_logo: "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=035",
     task: "Referral Tasks, Exchange Tasks",
+  },
+  // Bless Network
+  {
+    featured_id: "bless_network_mining_step_by_step_guide_to_install_node",
+    featured_title: "Bless Network",
+    featured_image:
+      "https://pbs.twimg.com/media/GcNhqxLW0AACXto?format=jpg&name=large",
+    company_logo:
+      "https://pbs.twimg.com/profile_images/1858647923212361728/GYk64f8U_400x400.jpg",
+    category: "featured",
+    description:
+      "The world’s first shared computer, powered by everyday devices.Users can now power the applications and websites they use automatically, and be rewarded for doing so.",
+    type: "$BLESS👑",
+    type2: "Network Mining",
+    steps: [
+      "https://bless.network/dashboard?ref=0ARKM9 to register to Bless Network",
+      "https://chromewebstore.google.com/detail/bless/pljbjcehnhcnofmkdbjolghdcjnmekia?hl=en-US&utm_source=ext_sidebar to install bless chrome extension login with your bless network email and password and start the node",
+      "If you have Missed your 10% referral bonus? you can head to your dashboard's achievement tab to manually add your referral code— 0ARKM9",
+      "Keep your node running and share with your friends to earn extra rewards",
+      "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
+      "Follow @theblessnetwork on X - https://x.com/theblessnetwork - to know more about the Bless Network.",
+    ],
+    availability: true,
+    price: 10000,
+    listed_price: "N/A",
+    network: "Solana",
+    network_logo: "https://cryptologos.cc/logos/solana-sol-logo.svg?v=035",
+    task: "network mining, install node, referral",
+    status: "(mining stage)"
   },
 ];
 
