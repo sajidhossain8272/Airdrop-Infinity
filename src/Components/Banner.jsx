@@ -116,13 +116,18 @@ const CategorySection = ({ title, data }) => {
             key={item.featured_id}
             className=' mb-2 card card-bordered w-full sm:w-80 shadow-xl'
           >
+            
             <Link to={`/airdrop/${item.featured_id}`}>
             <figure>
               <img className="hover:scale-105 transition-transform duration-300 flex-shrink-0 rounded-lg" src={item.featured_image} alt={item.featured_title} />
             </figure>
             </Link>
+            
             <div className='card-body '>
-              <div className='flex justify-between '>
+         
+
+              <div className='flex justify-start gap-1 '>
+                
                 <img
                   className='rounded-full'
                   width={35}
@@ -130,12 +135,11 @@ const CategorySection = ({ title, data }) => {
                   src={item.company_logo}
                   alt=''
                 />
-                <h2 className='card-title'>{item.featured_title}</h2>
-                <h3 className='lato-bold'>
-                  Est. <span className='text-green-600'> ${item.price} </span>
-                </h3>
+                <h2 className='card-title'>{item.featured_title} </h2>
+              
+                
               </div>
-
+            
               <div className="flex ">
               <p className='lato-bold'>{item.type}</p>
 
@@ -153,9 +157,17 @@ const CategorySection = ({ title, data }) => {
                 >
                   Claim Airdrop
                 </Link>
+                
               </div>
             </div>
+            <div className="flex gap-28">
+            <h3 className='lato-bold flex justify-start pl-8 pb-4 '>
+                  Est. <span className='text-green-600'> ${item.price} </span>
+                </h3> 
+                <h4 className="text-xs font-bold pt-0.5">{item.status}</h4> </div>
+
           </div>
+          
         ))}
       </div>
       {/* Loader element for triggering the infinite scroll */}

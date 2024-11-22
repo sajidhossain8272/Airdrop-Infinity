@@ -85,7 +85,7 @@
 .animate-scroll {
   display: flex;
   width: calc(100% * 3);
-  animation: scroll 180s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 @media (max-width: 1024px) {
@@ -156,3 +156,6 @@ bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600
   @apply bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600
   text-white p-1 lg:p-2;
 }
+
+
+

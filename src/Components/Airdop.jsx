@@ -43,6 +43,7 @@ const Airdrop = () => {
               rel='noopener noreferrer'
               className='text-blue-500 underline lato-black'
             >
+             
               Click Here
             </a>
           </span>

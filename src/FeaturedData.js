@@ -163,12 +163,13 @@ const FeaturedData = [
       "Share your unique referral link with friends to earn extra Major points.",
       "Follow @arairdropinfiniti https://x.com/@airdropinfiniti for regular updates and upcoming opportunities.",
     ],
-    availability: true,
+    availability: false,
     price: 250,
     listed_price: "1.5 (Pre Market)",
     network: "TON",
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "Telegram Mini App, Tap Game,Social Tasks. Referral Tasks",
+    status: "(Token's Allocated )"
   },
 
   // Binance
