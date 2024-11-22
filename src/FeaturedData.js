@@ -15,7 +15,7 @@ const FeaturedData = [
     steps: [
       "Go to the official Grass platform https://app.getgrass.io/register/?referralCode=sSlCpigoGJeZbzM",
       "Create an account or log in if you already have one.",
-      "Click on the “Connect” button to link your wallet or account.",
+      "Click on the -Connect- button to link your wallet or account.",
       "Download any necessary extensions or applications, like the Desktop Node, Lite Node (Chrome Extension)",
       "https://x.com/getgrass_io to Follow @getgrass_io on X.",
       "Like and retweet the official airdrop announcement.",
@@ -293,6 +293,49 @@ const FeaturedData = [
     task: "network mining, install node, referral",
     status: "(mining stage)"
   },
+  // Node Pay
+  {
+    featured_id: "node_pay_network_mining_step_by_step_guide_to_install_node",
+    featured_title: "Nodepay",
+    featured_image:
+      "https://pbs.twimg.com/media/GSPE1l_agAA0rHD?format=jpg&name=4096x4096",
+    company_logo:
+      "https://pbs.twimg.com/profile_images/1785448882195013632/NlAWjldQ_400x400.jpg",
+    category: "featured",
+    description:
+      "Global AI training and development platform, providing a decentralized ecosystem for users to own and access revolutionary AI models.",
+    type: "$BLESS👑",
+    type2: "Network Mining",
+    steps: [
+      "https://app.nodepay.ai/register?ref=AG6dNKimwe5P8JR to register to Nodepay",
+      "https://chromewebstore.google.com/detail/nodepay-extension/lgmpfmgeabnnlemejacfljbmonaomfmm?hl=en-US&utm_source=ext_sidebar to install node pay chrome extension login with your node pay email and password and start the node",
+      "Keep your node running and share with your friends to earn extra rewards",
+      "Verify your email and connect your Bitget or metamask(Solana) wallet address to ensure your rewards are safe",
+      "Click 'Verify' in the 'Verify Your Email' box",
+      "Check your inbox for a Nodepay verification email",
+      "Click the confirmation link (valid for 24 hrs)",
+      "Wait for the green 'Verified' checkmark",
+      "Select 'Connect' in the 'Connect Your Wallet' box",
+      "Choose your Solana wallet & Sign the verification message ",
+      "Click 'Confirm & Check your email for the wallet confirmation link (valid for 1 hr)",
+      "Look for the 'Wallet is verified' success message ",
+      "https://twitter.com/nodepay_ai/status/1859129551902962147 to get a brief wallet connection steps" ,
+      "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
+      "Follow @nodepay_ai on X - https://x.com/nodepay_ai - to know more about the Node Pay"
+    ],
+    availability: true,
+    price: 2500,
+    listed_price: "N/A",
+    network: "Solana",
+    network_logo: "https://cryptologos.cc/logos/solana-sol-logo.svg?v=035",
+    task: "network mining, install node, referral",
+    status: "(mining stage)"
+  },
+
+
+   
+
+
 ];
 
 export default FeaturedData;
