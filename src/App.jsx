@@ -10,7 +10,6 @@ import { Analytics } from "@vercel/analytics/react";
 function App() {
   return (
     <>
-      <Analytics />
       <Helmet>
         <title>
           Airdrop Infinity | Bringing you the best crypto airdrops, in 2025!
@@ -49,6 +48,8 @@ function App() {
         </script>
       </Helmet>
       <HeadProvider>
+      <Analytics />
+
         <Nav />
         <Banner />
         <Footer />

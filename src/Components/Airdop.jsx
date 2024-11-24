@@ -59,18 +59,18 @@ const Airdrop = () => {
       <div>
         <Helmet> <title>Airdrop Infinity | {item.featured_title}</title></Helmet>
         <Nav />
-        <div className='p-8 lato-regular'>
+        <div className='p-8 lato-regular lg:pl-80 lg:pr-80'>
           {/* Set the dynamic page title */}
           <Title>{item.featured_title} - Airdrop Infinity</Title>
 
           {/* Set the dynamic meta description */}
           <Meta name='description' content={item.description} />
 
-          <div className='lg:flex lg:justify-center gap-10 '>
+          <div className='lg:flex lg:gap-10 lg:justify-center gap-10'>
             <img 
               src={item.featured_image}
               alt={item.featured_title}
-              className='w-fixed object-fit my-4 shadow-2xl rounded-3xl lg:w-[1280px] lg:h-[720px] '
+              className='w-fixed object-fit my-4 shadow-2xl rounded-3xl lg:w-[960px] lg:h-[540px] '
             />
             <div className='lg:pt-2 border-2 p-4'>
               <p className='text-lg  lg:w-[500px]'>{item.description}</p> <br />

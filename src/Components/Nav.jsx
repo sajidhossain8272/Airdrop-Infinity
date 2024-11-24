@@ -173,7 +173,7 @@ const Nav = () => {
         </div>
 
         {/* Navbar End */}
-        <div className='navbar-end'>
+        <div className='navbar-end pr-4'>
           {!user ? (
             <button
               onClick={handleSignIn}

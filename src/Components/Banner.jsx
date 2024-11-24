@@ -55,7 +55,7 @@ const Banner = () => {
       />
 
       {/* Category sections */}
-      <div className='lg:flex justify-center gap-8 pt-20 flex-wrap mb-40'>
+      <div className='lg:flex justify-center gap-0 pt-20 flex-wrap mb-40 lg:pl-32 lg:pr-40'>
         {/* Featured Airdrops */}
         <CategorySection title='Featured Airdrops' data={featuredData} />
 
