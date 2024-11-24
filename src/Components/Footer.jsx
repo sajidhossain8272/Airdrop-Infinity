@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
           </nav>
           <hr className=' w-full h-2 mx-auto my-1 mt-2' />{" "}
-          <p>
+          <p className="lg:pl-96 lg:pr-96">
             {" "}
             <span className='lato-bold'> Disclaimer: </span> The information
             provided on the Airdrop Infinity website is solely for informational
