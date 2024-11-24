@@ -1,21 +1,21 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { signInWithGoogle } from "../firebase"; // Ensure correct import path
+// import { signInWithGoogle } from "../firebase"; // Ensure correct import path
 import { FaReadme } from "react-icons/fa";
 
 const Nav = () => {
-  const [user, setUser] = useState(null); // State to store user info
+  // const [user, setUser] = useState(null); // State to store user info
 
-  const handleSignIn = async () => {
-    try {
-      const signedInUser = await signInWithGoogle();
-      if (signedInUser) {
-        setUser(signedInUser); // Update the user state
-      }
-    } catch (error) {
-      console.error("Error signing in:", error);
-    }
-  };
+  // const handleSignIn = async () => {
+  //   try {
+  //     const signedInUser = await signInWithGoogle();
+  //     if (signedInUser) {
+  //       setUser(signedInUser); // Update the user state
+  //     }
+  //   } catch (error) {
+  //     console.error("Error signing in:", error);
+  //   }
+  // };
 
   return (
     <div>
@@ -174,7 +174,10 @@ const Nav = () => {
 
         {/* Navbar End */}
         <div className='navbar-end pr-4'>
-          {!user ? (
+          <div>
+
+          </div>
+          {/* {!user ? (
             <button
               onClick={handleSignIn}
               className='btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600'
@@ -186,7 +189,7 @@ const Nav = () => {
               <span className='lato-black pr-1'>Welcome:</span>
               <span className='user-text'>{user.displayName}! </span>
             </p>
-          )}
+          )} */}
         </div>
       </div>
 
