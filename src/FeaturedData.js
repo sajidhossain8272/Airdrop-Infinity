@@ -279,7 +279,6 @@ const FeaturedData = [
     type2: "Network Mining",
     steps: [
       "https://bless.network/dashboard?ref=0ARKM9 to register to Bless Network",
-      "https://chromewebstore.google.com/detail/bless/pljbjcehnhcnofmkdbjolghdcjnmekia?hl=en-US&utm_source=ext_sidebar to install bless chrome extension login with your bless network email and password and start the node",
       "If you have Missed your 10% referral bonus? you can head to your dashboard's achievement tab to manually add your referral code— 0ARKM9",
       "Keep your node running and share with your friends to earn extra rewards",
       "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
@@ -308,12 +307,10 @@ const FeaturedData = [
     type2: "Network Mining",
     steps: [
       "https://app.nodepay.ai/register?ref=AG6dNKimwe5P8JR to register to Nodepay",
-      "https://chromewebstore.google.com/detail/nodepay-extension/lgmpfmgeabnnlemejacfljbmonaomfmm?hl=en-US&utm_source=ext_sidebar to install node pay chrome extension login with your node pay email and password and start the node",
       "Keep your node running and share with your friends to earn extra rewards",
       "Verify your email and connect your Bitget or metamask(Solana) wallet address to ensure your rewards are safe",
       "Click 'Verify' in the 'Verify Your Email' box",
       "Check your inbox for a Nodepay verification email",
-      "Click the confirmation link (valid for 24 hrs)",
       "Wait for the green 'Verified' checkmark",
       "Select 'Connect' in the 'Connect Your Wallet' box",
       "Choose your Solana wallet & Sign the verification message ",
