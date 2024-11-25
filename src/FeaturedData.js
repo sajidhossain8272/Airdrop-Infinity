@@ -1,4 +1,39 @@
 const FeaturedData = [
+
+   // Y Nation
+   {
+    featured_id: "y_nation_telegram_farming_step_by_step_guide",
+    featured_title: "Y-Nation",
+    featured_image:
+      "https://pbs.twimg.com/media/GdQNW0uaoAIWLx2?format=jpg&name=large",
+    company_logo:
+      "https://pbs.twimg.com/profile_images/1846460694335537152/4xAri3Ze_400x400.jpg",
+    category: "telegram",
+    description:
+      "Y, The Crypto Superapp. Privately build and earn from your digital identity.",
+    type: "$Y👑",
+    type2: "Telegram Farming",
+    steps: [
+      "https://t.me/y_nation_bot/start?startapp=M8PVZD to open Y-Nation telegram bot ",
+      "Earn Y points every 6 hours by their interactive farming game",
+      "Open the bot every day to claim daily rewards",
+      "Earn extra points by completing simple social tasks",
+      "Earn 10% bonus points from referring friends and an additional 2.5% from their referral as well",
+      "Boost your earning by participating in their lucrative learn and earn platform every week",
+      "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
+      "Follow @nodepay_ai on X - https://x.com/_Y_nation - to know more about the Y Nation"
+    ],
+    availability: true,
+    price: 250,
+    listed_price: "N/A",
+    network: "Ton",
+    network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
+    task: "farming, social tasks, learn and earn, referral",
+    status: "Farming"
+  },
+
+
+
   //Solana Stage 2
   {
     featured_id: "Grass_Stage_2_Airdrop_2025",
