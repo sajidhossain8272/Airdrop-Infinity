@@ -12,7 +12,7 @@ const FeaturedData = [
     description:
       "Y, The Crypto Superapp. Privately build and earn from your digital identity.",
     type: "$Y🔑",
-    type2: "Telegram Farming",
+    type2: "Telegram Farming 💎",
     steps: [
       "https://t.me/y_nation_bot/start?startapp=M8PVZD to open Y-Nation telegram bot ",
       "Earn Y points every 6 hours by their interactive farming game",
