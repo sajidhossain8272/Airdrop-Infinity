@@ -25,7 +25,7 @@ const FeaturedData = [
     listed_price: "N/A",
     network: "Kaiser",
     network_logo:
-      "https://pbs.twimg.com/profile_images/1776202066282926080/5ppDFq9k_400x400.jpg",
+      "",
     task: "network mining, social tasks, referral",
     status: "mining stage",
   },
