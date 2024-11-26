@@ -55,7 +55,7 @@ const Banner = () => {
       />
 
       {/* Category sections */}
-      <div className='lg:flex justify-center gap-0 pt-20 flex-wrap mb-40 lg:pl-32 lg:pr-40'>
+      <div className='lg:flex justify-center gap-1 pt-20 flex-wrap mb-40 lg:pl-32 lg:pr-40 '>
         {/* Featured Airdrops */}
         <CategorySection title='Featured Airdrops' data={featuredData} />
 
@@ -73,13 +73,13 @@ const Banner = () => {
 };
 
 const CategorySection = ({ title, data }) => {
-  const [visibleItems, setVisibleItems] = useState(4); // Initially show 4 items
+  const [visibleItems, setVisibleItems] = useState(1000); // Initially show 4 items
   const loaderRef = useRef(null);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadMoreItems = () => {
     if (visibleItems < data.length) {
-      setVisibleItems((prev) => prev + 4); // Increase visible items by 4 on each scroll
+      setVisibleItems((prev) => prev + 1000); // Increase visible items by 4 on each scroll
     }
   };
 
