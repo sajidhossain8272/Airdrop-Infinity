@@ -1,7 +1,37 @@
 const FeaturedData = [
+  //  Kaisar Network
+  {
+    featured_id: "kaisar network_depin_mining_step_by_step_guide",
+    featured_title: "Kaisar Network",
+    featured_image:
+      "https://pbs.twimg.com/media/GcwExUGWQAAgzPp?format=jpg&name=4096x4096",
+    company_logo:
+      "https://pbs.twimg.com/profile_images/1776202066282926080/5ppDFq9k_400x400.jpg",
+    category: "new",
+    description: "The Universal AI Compute Layer. Your Compute, Your Currency.",
+    type: "$KAISER",
+    type2: "DePin Network Mining",
+    steps: [
+      "https://zero.kaisar.io/register?ref=gnSBoK962 to open Kaisar Network",
+      "Verify your email and install required chrome extension",
+      "Login to connect with your dashboard and start mining by earning points with your idle internet",
+      "Earn extra points by completing simple social tasks",
+      "Earn extra points and raffle tickets by referring friends",
+      "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
+      "Follow @KaisarNetwork on X - https://x.com/KaisarNetwork - to know more about Kaisar Network",
+    ],
+    availability: true,
+    price: 500,
+    listed_price: "N/A",
+    network: "Kaiser",
+    network_logo:
+      "https://pbs.twimg.com/profile_images/1776202066282926080/5ppDFq9k_400x400.jpg",
+    task: "network mining, social tasks, referral",
+    status: "mining stage",
+  },
 
-   // Y Nation
-   {
+  // Y Nation
+  {
     featured_id: "y_nation_telegram_farming_step_by_step_guide",
     featured_title: "Y-Nation",
     featured_image:
@@ -21,7 +51,7 @@ const FeaturedData = [
       "Earn 10% bonus points from referring friends and an additional 2.5% from their referral as well",
       "Boost your earning by participating in their lucrative learn and earn platform every week",
       "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
-      "Follow @nodepay_ai on X - https://x.com/_Y_nation - to know more about the Y Nation"
+      "Follow @_Y_nation on X - https://x.com/_Y_nation - to know more about the Y Nation",
     ],
     availability: true,
     price: 250,
@@ -29,10 +59,8 @@ const FeaturedData = [
     network: "Ton",
     network_logo: "https://cryptologos.cc/logos/toncoin-ton-logo.svg?v=035",
     task: "farming, social tasks, learn and earn, referral",
-    status: "Farming"
+    status: "Farming",
   },
-
-
 
   //Solana Stage 2
   {
@@ -65,7 +93,7 @@ const FeaturedData = [
     network: "Solana ",
     network_logo: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
     task: "Running Desktop Node(2x earning), Network mining, Referral",
-    status: "listed (phase 2 ongoing)"
+    status: "listed (phase 2 ongoing)",
   },
   //Tomarket
   {
@@ -325,7 +353,7 @@ const FeaturedData = [
     network: "Solana",
     network_logo: "https://cryptologos.cc/logos/solana-sol-logo.svg?v=035",
     task: "network mining, install node, referral",
-    status: "(mining stage)"
+    status: "(mining stage)",
   },
   // Node Pay
   {
@@ -351,9 +379,9 @@ const FeaturedData = [
       "Choose your Solana wallet & Sign the verification message ",
       "Click 'Confirm & Check your email for the wallet confirmation link (valid for 1 hr)",
       "Look for the 'Wallet is verified' success message ",
-      "https://twitter.com/nodepay_ai/status/1859129551902962147 to get a brief wallet connection steps" ,
+      "https://twitter.com/nodepay_ai/status/1859129551902962147 to get a brief wallet connection steps",
       "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
-      "Follow @nodepay_ai on X - https://x.com/nodepay_ai - to know more about the Node Pay"
+      "Follow @nodepay_ai on X - https://x.com/nodepay_ai - to know more about the Node Pay",
     ],
     availability: true,
     price: 2500,
@@ -361,13 +389,8 @@ const FeaturedData = [
     network: "Solana",
     network_logo: "https://cryptologos.cc/logos/solana-sol-logo.svg?v=035",
     task: "network mining, install node, referral",
-    status: "(mining stage)"
+    status: "(mining stage)",
   },
-
-
-   
-
-
 ];
 
 export default FeaturedData;
