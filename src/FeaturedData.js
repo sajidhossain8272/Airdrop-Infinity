@@ -1,4 +1,38 @@
 const FeaturedData = [
+  //  Mine Cow
+  {
+    featured_id: "mine_cow_new_telegram_tap_game_2025",
+    featured_title: "Mine Cow",
+    featured_image:
+      "https://pbs.twimg.com/media/GbFL7C8XsAAN0y7?format=jpg&name=large",
+    company_logo:
+      "https://pbs.twimg.com/profile_images/1850923173518204928/R6tEPB8S_400x400.png",
+    category: "telegram",
+    description:
+      "Alpine MineCow farmer 🐄| Swiss dairy & NFTs 🍫| Milk to tokens 💰| Powered by Swisstronik 🇨🇭",
+    type: "$COW",
+    type2: "Telegram Tap Game💎",
+    steps: [
+      "https://zero.kaisar.io/register?ref=gnSBoK962 to open Mine Cow telegram bot",
+      "Tap to milk your cows daily.",
+      "Convert milk into luxury products like cheese and chocolate.",
+      "Use in-game currency to boost production.",
+      "Every step gets you closer to NFTs!",
+      "🐄 Don’t starve your cows, farmer! Complete daily tasks! 🐄",
+      "Use in-game currency to boost production.",
+      "Copy referral link and send it to all of your friends - 🫂 The more friends you bring, the faster your farm will grow! ",
+      "Follow @airdropinfiniti on X - https://x.com/@airdropinfiniti - for regular updates and upcoming opportunities.",
+      "Follow @KaisarNetwork on X - https://x.com/KaisarNetwork - to know more about Kaisar Network",
+    ],
+    availability: true,
+    price: 100,
+    listed_price: "N/A",
+    network: "TON",
+    network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
+    task: "tap game, social tasks, referral",
+    status: "mining stage",
+  },
+
   //  Kaisar Network
   {
     featured_id: "kaisar network_depin_mining_step_by_step_guide",
@@ -24,8 +58,7 @@ const FeaturedData = [
     price: 500,
     listed_price: "N/A",
     network: "Kaiser",
-    network_logo:
-      "",
+    network_logo: "",
     task: "network mining, social tasks, referral",
     status: "mining stage",
   },
