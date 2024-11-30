@@ -84,6 +84,19 @@ const InfinityDrop = () => {
               Infinity Drop Airdrop Home Page
             </a>
           </div>
+          <div className="flex items-center space-x-2">
+            <span className="text-sm">
+              5. After completing all the tasks above Submit your details on the
+            </span>
+            <a
+              href="https://forms.gle/LS284erydXbFNsYUA"
+              className="text-blue-500 hover:underline font-semibold"
+            >
+              Google Form
+            </a>
+          </div>
+
+
         </div>
 
         <p className="mt-6 text-md">
