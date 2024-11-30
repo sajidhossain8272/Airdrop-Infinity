@@ -1,4 +1,33 @@
 const FeaturedData = [
+  //Infinity Drop
+  {
+    featured_id: "infinity_drop_IDP_coin_by_airdrop_infinity_2025",
+    featured_title: "Infinity Drop",
+    featured_image:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FBanner%2FInfinity%20Drop.png?alt=media&token=bce7a756-0234-4d0d-b326-5a7c41734510",
+    company_logo:
+      "https://firebasestorage.googleapis.com/v0/b/sajid-hossain.appspot.com/o/Airdrop%20Infinity%2FLogo%2FLogo.png?alt=media&token=958e8485-d3f3-4e7d-a173-b28805dd4e23",
+    category: "featured",
+    description:
+      "Early Adopters Airdrop Launched for Infinity Drop $IDP. This is your chance to be part of something BIG from the very beginning. Don’t miss out on these incredible rewards. Start today and maximize your airdrop benefits! 💥",
+    type: "$IDP",
+    type2: "Early Adopters Airdrop",
+    steps: [
+      "https://t.me/infinity_drop_bot Start the Infinity Drop Telegram Bot and follow the instructions.",
+      "https://x.com/airdropinfiniti Follow Airdrop Infinity on Twitter",
+      "https://www.facebook.com/airdropinfinity Like Airdrop Infinity on Facebook",
+      "https://t.me/airdropinfinityofficial Join Airdrop Infinity's Telegram Community",
+      "Complete as many airdrops as you can from the Airdrop Infinity home page - https://www.facebook.com/airdropinfinity",
+    ],
+    availability: true,
+    price: 1000,
+    listed_price: " ∞ ",
+    network: "TON",
+    network_logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=035",
+    task: "social tasks, airdrop tasks",
+    status: "early stage",
+  },
+
   //  Mine Cow
   {
     featured_id: "mine_cow_new_telegram_tap_game_2025",
