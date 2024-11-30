@@ -109,6 +109,7 @@ const InfinityDrop = () => {
           <div className="flex justify-center">
             <NavLink
               to="https://docs.google.com/forms/d/e/1FAIpQLSdiM9vKBiI08LIZ7mYnjB-5ZCzye-hQ3Eipb4SNl6WXbcErkA/viewform"
+              target="_blank"
               className="btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600"
             >
               Claim Airdrop
