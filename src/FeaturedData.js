@@ -18,6 +18,7 @@ const FeaturedData = [
       "https://www.facebook.com/airdropinfinity Like Airdrop Infinity on Facebook",
       "https://t.me/airdropinfinityofficial Join Airdrop Infinity's Telegram Community",
       "Visit the Airdrop Infinity Website or the Telegram bot daily & Complete as many airdrops as you can - https://www.facebook.com/airdropinfinity",
+      "After completing all the tasks above Submit your details on the Google form - https://forms.gle/LS284erydXbFNsYUA"
     ],
     availability: true,
     price: 1000,
