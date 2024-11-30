@@ -75,7 +75,7 @@ const InfinityDrop = () => {
 
           <div className="flex items-center space-x-2">
             <span className="text-sm">
-              4. Complete as many airdrops as you can from the
+              4. Open the bot daily and complete as many airdrops as you can from the
             </span>
             <a
               href="https://airdropinfinity.com"
