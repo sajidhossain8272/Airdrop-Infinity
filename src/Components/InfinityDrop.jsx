@@ -108,7 +108,7 @@ const InfinityDrop = () => {
         <div className="text-center mt-8">
           <div className="flex justify-center">
             <NavLink
-              to="https://www.airdropinfinity.com/airdrop/infinity_drop_IDP_coin_by_airdrop_infinity_2025"
+              to="https://docs.google.com/forms/d/e/1FAIpQLSdiM9vKBiI08LIZ7mYnjB-5ZCzye-hQ3Eipb4SNl6WXbcErkA/viewform"
               className="btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600"
             >
               Claim Airdrop
