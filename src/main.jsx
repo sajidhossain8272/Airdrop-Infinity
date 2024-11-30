@@ -10,6 +10,8 @@ import Airdrop from './Components/Airdop.jsx';
 import Construction from './Components/Construction.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import InfinityDrop from './Components/InfinityDrop.jsx';
+import WebApp from '@twa-dev/sdk'
+
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,8 @@ const router = createBrowserRouter([
 
 
 ]);
+
+WebApp.ready();
 
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
