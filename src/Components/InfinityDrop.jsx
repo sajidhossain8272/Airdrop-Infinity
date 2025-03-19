@@ -2,8 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
 import WebApp from "@twa-dev/sdk"; // Import Telegram WebApp SDK
-import Nav from "./Nav";
-import Footer from "./Footer";
 
 const InfinityDrop = () => {
   // Telegram WebApp initialization
@@ -28,7 +26,6 @@ const InfinityDrop = () => {
       <Helmet>
         <title>Airdrop Infinity | Infinity Drop🔥</title>
       </Helmet>
-      <Nav />
       <div className="text-black dark:text-gray-100 p-8 rounded-lg shadow-lg max-w-sm lg:max-w-4xl mx-auto glass mt-10 mb-10">
         <h1 className="text-2xl font-bold text-center mb-6">
           🚀 Early Adopters Airdrop Launched for Infinity Drop $IDP 🚀
@@ -124,7 +121,6 @@ const InfinityDrop = () => {
       </h2>
       <br />
 
-      <Footer />
     </div>
   );
 };

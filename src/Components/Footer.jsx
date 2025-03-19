@@ -5,12 +5,15 @@ import { IconContext } from "react-icons";
 
 const Footer = () => {
   return (
-    <div className='lato-regular'>
-      <hr
-        className='h-2 w-5/6 bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600
- rounded-lg mx-auto my-4'
-      />
-      <footer className='footer footer-center bg-base-100 text-black-content p-10'>
+//     <div className='lato-regular '>
+//       {/* <hr
+//         className='h-2 w-5/6 bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600
+//  rounded-lg mx-auto my-4'
+//       /> */}
+
+      <footer className='footer footer-center bg-base-100 text-black-content p-10  bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5 relative z-10'>
+                  <hr className=' w-full h-2 mx-auto my-1 mt-2' />{" "}
+
         <aside>
           <img width={50} src='/Logo-t-2.png' alt='' />
           <p className='lato-bold text-2xl'>Airdrop Infinity </p>
@@ -60,7 +63,6 @@ const Footer = () => {
               </a>
             </div>
           </nav>
-          <hr className=' w-full h-2 mx-auto my-1 mt-2' />{" "}
           <p className="lg:pl-96 lg:pr-96">
             {" "}
             <span className='lato-bold'> Disclaimer: </span> The information
@@ -78,7 +80,7 @@ const Footer = () => {
           </p>
         </aside>
       </footer>
-    </div>
+    // </div>
   );
 };
 

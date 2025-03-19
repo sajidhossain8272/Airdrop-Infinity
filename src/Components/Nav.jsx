@@ -1,200 +1,184 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import { signInWithGoogle } from "../firebase"; // Ensure correct import path
 import { FaReadme } from "react-icons/fa";
 
 const Nav = () => {
-  // const [user, setUser] = useState(null); // State to store user info
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // const handleSignIn = async () => {
-  //   try {
-  //     const signedInUser = await signInWithGoogle();
-  //     if (signedInUser) {
-  //       setUser(signedInUser); // Update the user state
-  //     }
-  //   } catch (error) {
-  //     console.error("Error signing in:", error);
-  //   }
-  // };
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <div>
-      <div className='navbar bg-base-100 lato-regular lg:pl-40 lg:pr-40'>
-        {/* Navbar Start */}
-        <div className='navbar-start'>
-          <div className='dropdown'>
-            <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
+    <nav className="sticky top-0 bg-base-100 z-50 shadow-sm  bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5 ">
+      <div className="navbar lg:pl-40 lg:pr-40 px-4">
+        {/* Mobile Menu */}
+        <div className="navbar-start">
+          <div className="dropdown">
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="btn btn-ghost lg:hidden"
+              aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
+            >
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-5 w-5'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M4 6h16M4 12h8m-8 6h16'
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
                 />
               </svg>
-            </div>
+            </button>
+            
             <ul
-              tabIndex={0}
-              className='menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl'
+              className={`menu menu-sm dropdown-content mt-3 p-2 shadow-lg bg-base-100 rounded-box w-52 ${
+                isMobileMenuOpen ? "block" : "hidden"
+              }`}
             >
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) => 
+                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/listed-airdrop"
+                  className={({ isActive }) =>
+                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Listed Airdrops
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/@airdropinfinity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg hover:bg-gray-100"
+                  onClick={closeMobileMenu}
+                >
+                  Medium <FaReadme className="inline-block ml-1" />
+                </a>
+              </li>
+              <li>
+                <NavLink
+                  to="/infinity-drop"
+                  className={({ isActive }) =>
+                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Infinity Drop 🔥
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* Logo */}
+          <Link 
+            to="/" 
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            onClick={closeMobileMenu}
+          >
+            <span className="lato-bold lg:text-4xl text-xl">Airdrop</span>
+            <img
+              className="w-16"
+              src="/Logo-t-2.png"
+              alt="Airdrop Infinity Logo"
+              width={100}
+              height={100}
+              loading="eager"
+            />
+          </Link>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal gap-2 px-1">
+            <li>
               <NavLink
-                to='/'
+                to="/"
                 className={({ isActive }) =>
-                  isActive
-                    ? "btn btn-ghost text-lg bg-black text-white"
-                    : "btn btn-ghost text-lg"
+                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
                 }
               >
                 Home
               </NavLink>
-              {/* <li>
-                <a className="text-lg">Airdrops</a>
-                <ul className="p-2">
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      Featured Airdrops
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      New Airdrops
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      Exchange Airdrops
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      Telegram Mini Airdrops
-                    </NavLink>
-                  </li>
-                </ul>
-              </li> */}
-              <a
-                href='https://medium.com/@airdropinfinity'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='btn btn-ghost text-lg'
-              >
-                Medium <FaReadme />
-              </a>{" "}
+            </li>
+            <li>
               <NavLink
-                to='/InfinityDrop'
+                to="/listed-airdrop"
                 className={({ isActive }) =>
-                  isActive
-                    ? "btn btn-ghost text-lg bg-black text-white"
-                    : "btn btn-ghost text-lg"
+                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
+                }
+              >
+                Listed Airdrops
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
+                }
+              >
+                Blog
+              </NavLink>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@airdropinfinity"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost text-lg"
+              >
+                Medium <FaReadme className="inline-block ml-1" />
+              </a>
+            </li>
+            <li>
+              <NavLink
+                to="/infinity-drop"
+                className={({ isActive }) =>
+                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
                 }
               >
                 Infinity Drop 🔥
-              </NavLink>{" "}
-            </ul>
-          </div>
-          <Link to="/" className='lato-bold lg:text-4xl text-xl pr-2 hover:cursor-pointer'>
-            Airdrop
-          </Link>
-          <Link to="/">
-          <img
-            className='w-16 pt-1'
-            width='100'
-            src='/Logo-t-2.png'
-            alt='Logo'
-          />
-          </Link>
-        </div>
-
-        {/* Navbar Center */}
-        <div className='navbar-center hidden lg:flex'>
-          <ul className='menu menu-horizontal px-1 gap-2'>
-            <NavLink
-              to='/'
-              className={({ isActive }) =>
-                isActive
-                  ? "btn btn-ghost text-lg bg-black text-white"
-                  : "btn btn-ghost text-lg"
-              }
-            >
-              Home
-            </NavLink>
-            {/* <li>
-              <details className="pl-20 pr-20">
-                <summary className="text-lg">Airdrops</summary>
-                <ul className="p-2">
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      Featured Airdrops
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      New Airdrops
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      Exchange Airdrops
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/construction" className="text-md">
-                      Telegram Mini Airdrops
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li> */}
-            <a
-              href='https://medium.com/@airdropinfinity'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='btn btn-ghost text-lg'
-            >
-              Medium <FaReadme />
-            </a>
-            <NavLink
-              to='/InfinityDrop'
-              className={({ isActive }) =>
-                isActive
-                  ? "btn btn-ghost text-lg bg-black text-white"
-                  : "btn btn-ghost text-lg"
-              }
-            >
-              Infinity Drop 🔥
-            </NavLink>{" "}
+              </NavLink>
+            </li>
           </ul>
         </div>
 
-        {/* Navbar End */}
-        <div className='navbar-end pr-4'>
-          <div>
-
-          </div>
-          {/* {!user ? (
-            <button
-              onClick={handleSignIn}
-              className='btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600'
-            >
-              Subscribe
-            </button>
-          ) : (
-            <p className='lg:text-lg lg: lato-bold text-sm navbar-end'>
-              <span className='lato-black pr-1'>Welcome:</span>
-              <span className='user-text'>{user.displayName}! </span>
-            </p>
-          )} */}
+        {/* Right Section */}
+        <div className="navbar-end pr-4">
+          {/* Add any additional controls here */}
         </div>
       </div>
 
-      <hr className='h-2 bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 rounded-lg mx-auto' />
-    </div>
+    </nav>
   );
 };
 
