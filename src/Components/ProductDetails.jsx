@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { FaStar } from "react-icons/fa";
+import Spinner from "./Spinner";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -33,8 +34,7 @@ const ProductDetails = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-600">Loading product details...</p>
-      </div>
+<div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>      </div>
     );
   }
 

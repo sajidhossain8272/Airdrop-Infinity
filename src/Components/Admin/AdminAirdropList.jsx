@@ -1,6 +1,7 @@
 // AdminAirdropList.jsx
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../Spinner';
 
 const AdminAirdropList = () => {
   const [airdrops, setAirdrops] = useState([]);
@@ -34,7 +35,7 @@ const AdminAirdropList = () => {
     }
   };
 
-  if (loading) return <div className="text-center py-10">Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
 
   return (
     <div className="admin-panel container mx-auto p-6 bg-white rounded-lg shadow-md">

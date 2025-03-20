@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Spinner from '../Spinner';
 
 const ProductAdmin = () => {
   const [products, setProducts] = useState([]);
@@ -111,7 +112,7 @@ const ProductAdmin = () => {
       <div className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-700">Existing Products</h2>
         {loading ? (
-          <p className="text-gray-600">Loading products...</p>
+          <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>
         ) : (
           products.map((product) => (
             <div

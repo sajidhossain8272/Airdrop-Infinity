@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Title, Meta } from "react-head";
 import { HeadProvider } from "react-head";
 import { Helmet } from "react-helmet-async";
+import Spinner from "./Spinner";
 
 const Airdrop = () => {
   const { id } = useParams();
@@ -28,7 +29,7 @@ const Airdrop = () => {
     fetchItem();
   }, [id, API_URL]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
   if (!item) return <div>No data available</div>;
 
   // Function to convert URLs in a string to clickable links.

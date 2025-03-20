@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Spinner from "./Spinner";
 
 const Banner = () => {
   const [airdrops, setAirdrops] = useState([]);
@@ -30,7 +31,7 @@ const Banner = () => {
   const telegramData = airdrops.filter((item) => item.category === "telegram");
   const newData = airdrops.filter((item) => item.category === "new");
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
 
   return (
     <div className="overflow-hidden lato-regular">

@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Spinner from "./Spinner";
 
 const TrendingProducts = () => {
   const [products, setProducts] = useState([]);
@@ -68,7 +69,7 @@ const TrendingProducts = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        {loading && <p className="text-center text-gray-600">Loading trending products...</p>}
+        {loading && <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>}
         {error && <p className="text-center text-red-600">{error}</p>}
 
         {!loading && !error && products.length > 0 ? (

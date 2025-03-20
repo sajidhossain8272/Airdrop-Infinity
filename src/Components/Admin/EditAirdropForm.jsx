@@ -1,6 +1,7 @@
 // EditAirdropForm.jsx
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Spinner from '../Spinner';
 
 const EditAirdropForm = () => {
   // Replace with your actual API URL
@@ -85,7 +86,7 @@ const EditAirdropForm = () => {
     }
   };
 
-  if (loading) return <div className="text-center py-10">Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
 
   return (
     <div className="container mx-auto p-6 bg-white rounded-lg shadow-md">

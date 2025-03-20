@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import { FiClock, FiCalendar, FiShare2, FiMessageCircle } from "react-icons/fi";
+import Spinner from "./Spinner";
 
 const BlogDetails = () => {
   const { slug } = useParams();
@@ -31,7 +32,7 @@ const BlogDetails = () => {
   if (loading) {
     return (
       <motion.div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-600">Loading blog post...</p>
+    <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>
       </motion.div>
     );
   }

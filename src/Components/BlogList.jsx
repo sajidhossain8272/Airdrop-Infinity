@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiSearch, FiChevronDown, FiArrowUp } from 'react-icons/fi';
+import Spinner from './Spinner';
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
@@ -85,9 +86,7 @@ const BlogList = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        Loading...
-      </div>
+      <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>
     );
   }
 

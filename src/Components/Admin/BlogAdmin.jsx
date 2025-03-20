@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import Spinner from '../Spinner';
 
 const BlogAdmin = () => {
   const [blogs, setBlogs] = useState([]);
@@ -123,7 +124,7 @@ const BlogAdmin = () => {
       <div className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-700">Existing Blogs</h2>
         {loading ? (
-          <p className="text-gray-600">Loading blogs...</p>
+          <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>
         ) : (
           blogs.map((blog) => (
             <div key={blog._id} className="p-4 border rounded-md flex justify-between items-center">

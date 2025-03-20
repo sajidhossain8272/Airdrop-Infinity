@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
-import { ErrorDisplay, LoadingSpinner } from './LoadingSpinner';
+import { ErrorDisplay,  } from './LoadingSpinner';
 import axios from 'axios';
+import Spinner from './Spinner';
 
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
@@ -23,7 +24,7 @@ const BlogPage = () => {
     fetchBlogs();
   }, []);
 
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
   if (error) return <ErrorDisplay message={error} />;
 
   return (

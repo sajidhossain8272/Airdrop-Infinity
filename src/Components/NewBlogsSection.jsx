@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Spinner from "./Spinner";
 
 const NewBlogsSection = () => {
   const [blogs, setBlogs] = useState([]);
@@ -25,7 +26,7 @@ const NewBlogsSection = () => {
     fetchBlogs();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
 
   return (
     <section className="py-16 relative z-10">
