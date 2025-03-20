@@ -1,7 +1,7 @@
-// Parent component example
 import { useState, useEffect } from 'react';
-import BlogList from './components/BlogList';
+import BlogList from './BlogList';
 import { ErrorDisplay, LoadingSpinner } from './LoadingSpinner';
+import axios from 'axios';
 
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
@@ -11,9 +11,8 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('/api/blogs');
-        const data = await response.json();
-        setBlogs(data);
+        const response = await axios.get('https://crypto-store-server.vercel.app/api/blogs');
+        setBlogs(response.data);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -28,7 +27,6 @@ const BlogPage = () => {
   if (error) return <ErrorDisplay message={error} />;
 
   return (
-
     <div>
       <BlogList blogs={blogs} />
     </div>

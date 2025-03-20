@@ -1,10 +1,11 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import PropTypes from 'prop-types';
 import { FiSearch, FiChevronDown, FiArrowUp } from 'react-icons/fi';
 
-const BlogList = ({ blogs = [] }) => {
+const BlogList = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
@@ -12,16 +13,36 @@ const BlogList = ({ blogs = [] }) => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const location = useLocation();
 
-  // Safely get categories
+  // Fetch blogs from API
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch("https://crypto-store-server.vercel.app/api/blogs");
+        if (!response.ok) {
+          throw new Error("Failed to fetch blogs");
+        }
+        const data = await response.json();
+        setBlogs(data);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  // Get unique categories from blogs
   const categories = useMemo(() => {
     const blogCategories = Array.isArray(blogs) ? blogs : [];
-    const uniqueCategories = [...new Set(blogCategories
-      .map(blog => blog?.category)
-      .filter(Boolean))];
+    const uniqueCategories = [
+      ...new Set(blogCategories.map(blog => blog?.category).filter(Boolean))
+    ];
     return ['All', ...uniqueCategories];
   }, [blogs]);
 
-  // Safely filter blogs
+  // Filter blogs based on search query and category
   const filteredBlogs = useMemo(() => {
     const validBlogs = Array.isArray(blogs) ? blogs : [];
     return validBlogs.filter(blog => {
@@ -30,24 +51,20 @@ const BlogList = ({ blogs = [] }) => {
       const category = blog?.category || '';
       
       const matchesSearch = title.includes(searchQuery.toLowerCase()) ||
-                          content.includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || 
-                            category === selectedCategory;
+                            content.includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === 'All' || category === selectedCategory;
       
       return matchesSearch && matchesCategory;
     });
   }, [blogs, searchQuery, selectedCategory]);
 
-  const displayedBlogs = useMemo(() => {
-    return filteredBlogs.slice(0, visibleBlogs);
-  }, [filteredBlogs, visibleBlogs]);
+  const displayedBlogs = useMemo(() => filteredBlogs.slice(0, visibleBlogs), [filteredBlogs, visibleBlogs]);
 
-  // Scroll handler
+  // Scroll handler: Show scroll-to-top button and load more blogs on scroll
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.pageYOffset > 300);
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && 
-          visibleBlogs < filteredBlogs.length) {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && visibleBlogs < filteredBlogs.length) {
         setVisibleBlogs(prev => prev + 6);
       }
     };
@@ -56,22 +73,25 @@ const BlogList = ({ blogs = [] }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [visibleBlogs, filteredBlogs.length]);
 
-  // Reset on filter change
+  // Reset visibleBlogs and scroll to top on filter change
   useEffect(() => {
     setVisibleBlogs(6);
     window.scrollTo(0, 0);
   }, [selectedCategory, searchQuery]);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  return (
-    <> 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
 
+  return (
     <div className="min-h-screen bg-base-100 lg:pl-40 lg:pr-40 px-4 py-12">
       {/* Search and Filter Section */}
       <div className="max-w-4xl mx-auto mb-12">
@@ -133,24 +153,17 @@ const BlogList = ({ blogs = [] }) => {
             No articles found matching your criteria
           </motion.div>
         ) : (
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            layout
-          >
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" layout>
             {displayedBlogs.map(blog => (
               <motion.article
-                key={blog?.id || Math.random()}
+                key={blog._id}
                 layout
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 className="card bg-white shadow-lg hover:shadow-xl transition-shadow"
               >
-                <Link
-                  to={`/blog/${blog?.slug || ''}`}
-                  state={{ backgroundLocation: location }}
-                  className="block h-full"
-                >
+                <Link to={`/blog/${blog.slug}`} state={{ backgroundLocation: location }} className="block h-full">
                   <figure className="h-48 overflow-hidden rounded-t-lg bg-gray-100">
                     {blog?.image && (
                       <img
@@ -177,15 +190,11 @@ const BlogList = ({ blogs = [] }) => {
                       {blog?.excerpt || 'No excerpt available'}
                     </p>
                     <div className="mt-4 text-sm text-gray-500">
-                      {blog?.date ? (
-                        new Date(blog.date).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })
-                      ) : (
-                        'Date not available'
-                      )}
+                      {blog?.date ? new Date(blog.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      }) : 'Date not available'}
                     </div>
                   </div>
                 </Link>
@@ -220,28 +229,7 @@ const BlogList = ({ blogs = [] }) => {
         </div>
       )}
     </div>
-    </>
   );
-};
-
-BlogList.defaultProps = {
-  blogs: []
-};
-
-BlogList.propTypes = {
-  blogs: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      title: PropTypes.string,
-      slug: PropTypes.string,
-      excerpt: PropTypes.string,
-      content: PropTypes.string,
-      category: PropTypes.string,
-      date: PropTypes.string,
-      readTime: PropTypes.string,
-      image: PropTypes.string
-    })
-  )
 };
 
 export default BlogList;

@@ -109,7 +109,7 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-200 mb-8"
             >
-              Discover verified airdrops, earn $IDP tokens, and optimize your setup with 
+              Discover verified airdrops, earn $INF tokens, and optimize your setup with 
               <span className="block mt-2 text-sm text-purple-300">curated AliExpress tech gear</span>
             </motion.p>
 
@@ -122,7 +122,7 @@ const Home = () => {
                 to="/infinity-drop" 
                 className="inline-block px-8 py-3 text-lg font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
               >
-                Start Earning $IDP
+                Start Earning $INF
               </Link>
             </motion.div>
 

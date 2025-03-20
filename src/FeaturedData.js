@@ -10,7 +10,7 @@ const FeaturedData = [
     category: "featured",
     description:
       "Early Adopters Airdrop Launched for Infinity Drop $IDP. This is your chance to be part of something BIG from the very beginning. Don’t miss out on these incredible rewards. Start today and maximize your airdrop benefits! 💥",
-    type: "$IDP",
+    type: "$INF",
     type2: "Early Adopters Airdrop",
     steps: [
       "https://t.me/infinity_drop_bot Start the Infinity Drop Telegram Bot and follow the instructions.",

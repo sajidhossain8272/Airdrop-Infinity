@@ -28,7 +28,7 @@ const InfinityDrop = () => {
       </Helmet>
       <div className="text-black dark:text-gray-100 p-8 rounded-lg shadow-lg max-w-sm lg:max-w-4xl mx-auto glass mt-10 mb-10">
         <h1 className="text-2xl font-bold text-center mb-6">
-          🚀 Early Adopters Airdrop Launched for Infinity Drop $IDP 🚀
+          🚀 Early Adopters Airdrop Launched for Infinity Drop $INF 🚀
         </h1>
 
         <p className="text-md mb-4">
