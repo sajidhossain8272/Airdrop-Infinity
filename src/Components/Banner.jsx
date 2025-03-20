@@ -34,7 +34,7 @@ const Banner = () => {
   if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
 
   return (
-    <div className="overflow-hidden lato-regular">
+    <div className="overflow-hidden lato-regular bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5">
       <h3 className="lg:pl-96 lg:pt-10 lg:text-6xl text-3xl lg:pr-40 p-4 pl-8 lato-bold">
         Airdrop Infinity – Bringing you the best crypto airdrops, in 2025!
       </h3>

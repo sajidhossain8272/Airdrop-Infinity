@@ -91,7 +91,7 @@ const BlogList = () => {
   }
 
   return (
-    <div className="min-h-screen bg-base-100 lg:pl-40 lg:pr-40 px-4 py-12">
+    <div className="min-h-screen bg-base-100 lg:pl-40 lg:pr-40 px-4 py-12 bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5">
       {/* Search and Filter Section */}
       <div className="max-w-4xl mx-auto mb-12">
         <div className="relative flex flex-col md:flex-row gap-4">

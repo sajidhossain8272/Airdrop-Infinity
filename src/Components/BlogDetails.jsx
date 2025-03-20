@@ -46,7 +46,7 @@ const BlogDetails = () => {
   }
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-white">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5">
       <article className="max-w-4xl mx-auto px-4 py-12">
         <header className="mb-12">
           <motion.h1 initial={{ y: 20 }} animate={{ y: 0 }} className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">

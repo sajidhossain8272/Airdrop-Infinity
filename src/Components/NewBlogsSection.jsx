@@ -29,7 +29,7 @@ const NewBlogsSection = () => {
   if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
 
   return (
-    <section className="py-16 relative z-10">
+    <section className="py-16 relative z-10 ">
       {/* New Blogs Section */}
       <motion.div 
         initial={{ opacity: 0 }}

@@ -63,7 +63,7 @@ const TrendingProducts = () => {
   };
 
   return (
-    <section className="py-16 lg:pl-40 lg:pr-40 relative z-10 bg-gray-50">
+    <section className="py-16 lg:pl-40 lg:pr-40 relative z-10 bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -79,7 +79,7 @@ const TrendingProducts = () => {
                 <motion.div
                   key={product._id}
                   whileHover={{ scale: 1.02 }}
-                  className="card card-bordered card-title bg-white shadow-xl overflow-hidden group mx-2"
+                  className="card card-bordered card-title bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5 shadow-xl overflow-hidden group mx-2"
                 >
                   <div className="relative h-48 bg-gray-100 overflow-hidden">
                     <img
