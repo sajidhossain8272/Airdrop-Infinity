@@ -59,7 +59,7 @@ const Nav = () => {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Listed Airdrops
+                  Infinity Airdrops
                 </NavLink>
               </li>
               <li>
@@ -70,20 +70,10 @@ const Nav = () => {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Blog
+                  Infinity Knowledge <FaReadme className="text-lg" />
                 </NavLink>
               </li>
-              <li>
-                <a
-                  href="https://medium.com/@airdropinfinity"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg hover:bg-gray-100"
-                  onClick={closeMobileMenu}
-                >
-                  Medium <FaReadme className="inline-block ml-1" />
-                </a>
-              </li>
+            
               <li>
                 <NavLink
                   to="/infinity-drop"
@@ -136,7 +126,7 @@ const Nav = () => {
                   `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
                 }
               >
-                Listed Airdrops
+                Infinity Airdrops
               </NavLink>
             </li>
             <li>
@@ -146,19 +136,10 @@ const Nav = () => {
                   `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
                 }
               >
-                Blog
+                Infinity Knowledge <FaReadme className="text-lg" />
               </NavLink>
             </li>
-            <li>
-              <a
-                href="https://medium.com/@airdropinfinity"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-ghost text-lg"
-              >
-                Medium <FaReadme className="inline-block ml-1" />
-              </a>
-            </li>
+    
             <li>
               <NavLink
                 to="/infinity-drop"

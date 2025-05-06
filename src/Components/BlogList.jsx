@@ -14,14 +14,11 @@ const BlogList = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const location = useLocation();
 
-  // Fetch blogs from API
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await fetch("https://crypto-store-server.vercel.app/api/blogs");
-        if (!response.ok) {
-          throw new Error("Failed to fetch blogs");
-        }
+        if (!response.ok) throw new Error("Failed to fetch blogs");
         const data = await response.json();
         setBlogs(data);
       } catch (error) {
@@ -30,38 +27,29 @@ const BlogList = () => {
         setLoading(false);
       }
     };
-
     fetchBlogs();
   }, []);
 
-  // Get unique categories from blogs
   const categories = useMemo(() => {
-    const blogCategories = Array.isArray(blogs) ? blogs : [];
     const uniqueCategories = [
-      ...new Set(blogCategories.map(blog => blog?.category).filter(Boolean))
+      ...new Set((blogs || []).map(blog => blog?.category).filter(Boolean))
     ];
     return ['All', ...uniqueCategories];
   }, [blogs]);
 
-  // Filter blogs based on search query and category
   const filteredBlogs = useMemo(() => {
-    const validBlogs = Array.isArray(blogs) ? blogs : [];
-    return validBlogs.filter(blog => {
+    return (blogs || []).filter(blog => {
       const title = blog?.title?.toLowerCase() || '';
       const content = blog?.content?.toLowerCase() || '';
       const category = blog?.category || '';
-      
-      const matchesSearch = title.includes(searchQuery.toLowerCase()) ||
-                            content.includes(searchQuery.toLowerCase());
+      const matchesSearch = title.includes(searchQuery.toLowerCase()) || content.includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || category === selectedCategory;
-      
       return matchesSearch && matchesCategory;
     });
   }, [blogs, searchQuery, selectedCategory]);
 
   const displayedBlogs = useMemo(() => filteredBlogs.slice(0, visibleBlogs), [filteredBlogs, visibleBlogs]);
 
-  // Scroll handler: Show scroll-to-top button and load more blogs on scroll
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.pageYOffset > 300);
@@ -69,30 +57,28 @@ const BlogList = () => {
         setVisibleBlogs(prev => prev + 6);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [visibleBlogs, filteredBlogs.length]);
 
-  // Reset visibleBlogs and scroll to top on filter change
   useEffect(() => {
     setVisibleBlogs(6);
     window.scrollTo(0, 0);
   }, [selectedCategory, searchQuery]);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>
+      <div className="flex justify-center items-center min-h-screen min-w-screen">
+        <Spinner />
+      </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-base-100 lg:pl-40 lg:pr-40 px-4 py-12 bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5">
-      {/* Search and Filter Section */}
+      {/* Search & Category Filter */}
       <div className="max-w-4xl mx-auto mb-12">
         <div className="relative flex flex-col md:flex-row gap-4">
           <div className="relative flex-1">
@@ -110,8 +96,6 @@ const BlogList = () => {
             <button
               className="flex items-center justify-between w-full md:w-64 px-4 py-3 rounded-lg border border-gray-200 bg-white"
               onClick={() => setIsCategoryOpen(!isCategoryOpen)}
-              aria-haspopup="listbox"
-              aria-expanded={isCategoryOpen}
             >
               {selectedCategory}
               <FiChevronDown className={`transform transition-transform ${isCategoryOpen ? 'rotate-180' : ''}`} />
@@ -141,7 +125,7 @@ const BlogList = () => {
         </div>
       </div>
 
-      {/* Blog List */}
+      {/* Blog Grid */}
       <AnimatePresence>
         {displayedBlogs.length === 0 ? (
           <motion.div
@@ -152,7 +136,10 @@ const BlogList = () => {
             No articles found matching your criteria
           </motion.div>
         ) : (
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" layout>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            layout
+          >
             {displayedBlogs.map(blog => (
               <motion.article
                 key={blog._id}
@@ -160,40 +147,47 @@ const BlogList = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="card bg-white shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden flex flex-col"
               >
                 <Link to={`/blog/${blog.slug}`} state={{ backgroundLocation: location }} className="block h-full">
-                  <figure className="h-48 overflow-hidden rounded-t-lg bg-gray-100">
+                  {/* Image */}
+                  <div className="aspect-[16/9] bg-gray-100">
                     {blog?.image && (
                       <img
                         src={blog.image}
-                        alt={blog?.title || 'Blog post image'}
+                        alt={blog?.title || 'Blog image'}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
                     )}
-                  </figure>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="badge bg-purple-100 text-purple-600 text-sm">
-                        {blog?.category || 'Uncategorized'}
-                      </span>
-                      <span className="text-sm text-gray-500">
-                        {blog?.readTime || '5 min read'}
-                      </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex flex-col justify-between h-full">
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-semibold px-2 py-1 bg-purple-100 text-purple-600 rounded">
+                          {blog?.category || 'Uncategorized'}
+                        </span>
+                        <span className="text-sm text-gray-500">
+                          {blog?.readTime || '5 min read'}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {blog?.title || 'Untitled Article'}
+                      </h3>
+                      <p className="text-gray-600 text-sm line-clamp-3">
+                        {blog?.excerpt || 'No excerpt available'}
+                      </p>
                     </div>
-                    <h3 className="text-xl lato-bold mb-2">
-                      {blog?.title || 'Untitled Article'}
-                    </h3>
-                    <p className="text-gray-600 line-clamp-3">
-                      {blog?.excerpt || 'No excerpt available'}
-                    </p>
                     <div className="mt-4 text-sm text-gray-500">
-                      {blog?.date ? new Date(blog.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      }) : 'Date not available'}
+                      {blog?.date
+                        ? new Date(blog.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })
+                        : 'Date not available'}
                     </div>
                   </div>
                 </Link>
@@ -209,19 +203,18 @@ const BlogList = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 transition-colors"
-          aria-label="Scroll to top"
+          className="fixed bottom-8 right-8 p-3 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700"
         >
           <FiArrowUp className="text-xl" />
         </motion.button>
       )}
 
-      {/* Load More */}
+      {/* Load More Button */}
       {visibleBlogs < filteredBlogs.length && (
-        <div className="text-center mt-8">
+        <div className="text-center mt-10">
           <button
-            className="btn bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 text-white"
             onClick={() => setVisibleBlogs(prev => prev + 6)}
+            className="px-6 py-3 bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 text-white rounded-lg hover:opacity-90 transition"
           >
             Load More Articles
           </button>

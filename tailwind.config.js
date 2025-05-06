@@ -18,5 +18,8 @@ export default {
     require("daisyui"),
     // eslint-disable-next-line no-undef
     require("tailwind-scrollbar")({ nocompatible: true }), // Enable tailwind-scrollbar
+    // eslint-disable-next-line no-undef
+    require("@tailwindcss/typography"),
+
   ],
 };
