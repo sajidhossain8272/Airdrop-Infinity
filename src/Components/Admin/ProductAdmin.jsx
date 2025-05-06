@@ -22,7 +22,7 @@ const ProductAdmin = () => {
   // API Base URL
   const API_BASE_URL =
     window.location.hostname === 'localhost'
-      ? 'http://localhost:5000/api/products'
+      ? 'https://crypto-store-server.vercel.app/api/products'
       : 'https://crypto-store-server.vercel.app/api/products';
 
   useEffect(() => {
