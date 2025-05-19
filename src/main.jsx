@@ -37,6 +37,9 @@ import BlogAdmin        from "./Components/Admin/BlogAdmin.jsx";            // â
 import AdminAirdropList from "./Components/Admin/AdminAirdropList.jsx";
 import EditAirdropForm  from "./Components/Admin/EditAirdropForm.jsx";
 import NewAirdropForm   from "./Components/Admin/NewAirdropForm.jsx";
+import InfinityDropBot from "./Components/InfinityDropBot.jsx";
+import ProtectedRoute from "./auth/ProtectedRoute.jsx";
+import UserLogin from "./auth/UserLogin.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +50,8 @@ const router = createBrowserRouter([
         <App />
       </>
     ),
+
+    
     errorElement: <ErrorBoundary />,
     children: [
       { index: true, element: <Home /> },
@@ -60,6 +65,22 @@ const router = createBrowserRouter([
       { path: "product/:id", element: <ProductDetails /> },
       { path: "*", element: <ErrorBoundary /> },
     ],
+  },
+      {
+       path: "user-login",
+       element: <UserLogin/>
+     },
+{
+  path: '/infinitydropbot',
+  element: (
+    <ProtectedRoute >    
+        <InfinityDropBot />
+
+    </ProtectedRoute>
+
+  ),
+
+    errorElement: <ErrorBoundary />,
   },
   {
     path: "/login",
@@ -94,6 +115,7 @@ const router = createBrowserRouter([
     path: "*",
     element: <Navigate to="/" replace />,
   },
+
 ]);
 
 WebApp.ready();
