@@ -1,6 +1,7 @@
+// src/Components/Nav.jsx
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaReadme } from "react-icons/fa";
+import { FaReadme, FaFire, FaInfinity } from "react-icons/fa";
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -8,7 +9,7 @@ const Nav = () => {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <nav className="sticky top-0 bg-base-100 z-50 shadow-sm  bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5 ">
+    <nav className="sticky top-0 bg-base-100 z-50 shadow-sm bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5">
       <div className="navbar lg:pl-40 lg:pr-40 px-4">
         {/* Mobile Menu */}
         <div className="navbar-start">
@@ -30,7 +31,11 @@ const Nav = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                  d={
+                    isMobileMenuOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }
                 />
               </svg>
             </button>
@@ -43,8 +48,8 @@ const Nav = () => {
               <li>
                 <NavLink
                   to="/"
-                  className={({ isActive }) => 
-                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                  className={({ isActive }) =>
+                    `text-lg ${isActive ? "bg-black text-white" : "hover:bg-gray-100"}`
                   }
                   onClick={closeMobileMenu}
                 >
@@ -55,10 +60,11 @@ const Nav = () => {
                 <NavLink
                   to="/listed-airdrop"
                   className={({ isActive }) =>
-                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                    `text-lg ${isActive ? "bg-black text-white" : "hover:bg-gray-100"}`
                   }
                   onClick={closeMobileMenu}
                 >
+                  <FaInfinity className="inline-block mr-1 text-lg" />
                   Infinity Airdrops
                 </NavLink>
               </li>
@@ -66,23 +72,22 @@ const Nav = () => {
                 <NavLink
                   to="/blog"
                   className={({ isActive }) =>
-                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                    `text-lg ${isActive ? "bg-black text-white" : "hover:bg-gray-100"}`
                   }
                   onClick={closeMobileMenu}
                 >
-                  Infinity Knowledge <FaReadme className="text-lg" />
+                  Infinity Knowledge <FaReadme className="inline-block ml-1 text-lg" />
                 </NavLink>
               </li>
-            
               <li>
                 <NavLink
                   to="/infinity-drop"
                   className={({ isActive }) =>
-                    `text-lg ${isActive ? 'bg-black text-white' : 'hover:bg-gray-100'}`
+                    `text-lg ${isActive ? "bg-black text-white" : "hover:bg-gray-100"}`
                   }
                   onClick={closeMobileMenu}
                 >
-                  Infinity Drop 🔥
+                  Infinity Drop <FaFire className="inline-block ml-1 text-lg" />
                 </NavLink>
               </li>
             </ul>
@@ -113,7 +118,7 @@ const Nav = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
+                  `btn btn-ghost text-lg ${isActive ? "bg-black text-white" : ""}`
                 }
               >
                 Home
@@ -123,9 +128,10 @@ const Nav = () => {
               <NavLink
                 to="/listed-airdrop"
                 className={({ isActive }) =>
-                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
+                  `btn btn-ghost text-lg ${isActive ? "bg-black text-white" : ""}`
                 }
               >
+                <FaInfinity className="inline-block mr-1 text-lg" />
                 Infinity Airdrops
               </NavLink>
             </li>
@@ -133,32 +139,30 @@ const Nav = () => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
+                  `btn btn-ghost text-lg ${isActive ? "bg-black text-white" : ""}`
                 }
               >
-                Infinity Knowledge <FaReadme className="text-lg" />
+                Infinity Knowledge <FaReadme className="inline-block ml-1 text-lg" />
               </NavLink>
             </li>
-    
             <li>
               <NavLink
                 to="/infinity-drop"
                 className={({ isActive }) =>
-                  `btn btn-ghost text-lg ${isActive ? 'bg-black text-white' : ''}`
+                  `btn btn-ghost text-lg ${isActive ? "bg-black text-white" : ""}`
                 }
               >
-                Infinity Drop 🔥
+                Infinity Drop <FaFire className="inline-block ml-1 text-lg" />
               </NavLink>
             </li>
           </ul>
         </div>
 
-        {/* Right Section */}
+        {/* Right Section (optional) */}
         <div className="navbar-end pr-4">
           {/* Add any additional controls here */}
         </div>
       </div>
-
     </nav>
   );
 };
