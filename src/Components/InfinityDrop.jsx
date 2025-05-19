@@ -82,7 +82,7 @@ const InfinityDrop = () => {
       </div>
 
       {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-2 items-start">
+      <div className="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-1 items-center">
         {/* Steps Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -140,7 +140,7 @@ const InfinityDrop = () => {
           </div>
         </motion.div>
 
-        {/* Mining CTA */}
+        {/* Mining CTA
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -166,7 +166,7 @@ const InfinityDrop = () => {
               💡 Tip: Stay active daily to maximize your INF mining rewards!
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Footer */}

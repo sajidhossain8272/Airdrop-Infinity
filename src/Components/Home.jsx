@@ -100,7 +100,7 @@ const Home = () => {
   transition={{ delay: 0.2, duration: 0.6 }}
   className="lg:text-7xl text-4xl lato-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 bg-clip-text text-transparent text-center"
 >
-  INF Mining Has Started — Grab Your Shares Now!
+  INF Airdrop Has Started — Grab Your Shares Now!
 </motion.h1>
 
 <motion.p 
