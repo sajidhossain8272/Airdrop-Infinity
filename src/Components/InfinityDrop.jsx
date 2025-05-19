@@ -155,7 +155,7 @@ const InfinityDrop = () => {
               Launch our Telegram Bot and begin earning $INF in real time. The earlier you start, the more you mine.
             </p>
             <a
-              href="https://t.me/airdropinfinitibot"
+              href="https://t.me/@infinity_drop_bot"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition"
