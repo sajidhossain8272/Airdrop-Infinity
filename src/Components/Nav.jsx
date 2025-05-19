@@ -76,7 +76,7 @@ const Nav = () => {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Infinity Knowledge <FaReadme className="inline-block ml-1 text-lg" />
+              <FaReadme className="inline-block ml-1 text-lg" />     Infinity Knowledge
                 </NavLink>
               </li>
               <li>
@@ -87,7 +87,7 @@ const Nav = () => {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Infinity Drop <FaFire className="inline-block ml-1 text-lg" />
+             <FaFire className="inline-block ml-1 text-lg" />      Infinity Drop
                 </NavLink>
               </li>
             </ul>
@@ -142,7 +142,7 @@ const Nav = () => {
                   `btn btn-ghost text-lg ${isActive ? "bg-black text-white" : ""}`
                 }
               >
-                Infinity Knowledge <FaReadme className="inline-block ml-1 text-lg" />
+          <FaReadme className="inline-block ml-1 text-lg" />      Infinity Knowledge 
               </NavLink>
             </li>
             <li>
@@ -152,7 +152,7 @@ const Nav = () => {
                   `btn btn-ghost text-lg ${isActive ? "bg-black text-white" : ""}`
                 }
               >
-                Infinity Drop <FaFire className="inline-block ml-1 text-lg" />
+        <FaFire className="inline-block ml-1 text-lg" />        Infinity Drop 
               </NavLink>
             </li>
           </ul>

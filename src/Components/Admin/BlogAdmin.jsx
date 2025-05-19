@@ -6,12 +6,12 @@ import 'react-quill/dist/quill.snow.css';
 import Spinner from '../Spinner';
 
 const BlogAdmin = () => {
-  const [blogs, setBlogs]           = useState([]);
+  const [blogs, setBlogs]               = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
-  const [showModal, setShowModal]   = useState(false);
-  const [loading, setLoading]       = useState(false);
-  const [error, setError]           = useState('');
-  const [formData, setFormData]     = useState({
+  const [showModal, setShowModal]       = useState(false);
+  const [loading, setLoading]           = useState(false);
+  const [error, setError]               = useState('');
+  const [formData, setFormData]         = useState({
     title: '', slug: '', content: '',
     category: '', readTime: '',
     image: '', excerpt: ''
@@ -38,7 +38,11 @@ const BlogAdmin = () => {
   };
 
   const resetForm = () => {
-    setFormData({ title:'', slug:'', content:'', category:'', readTime:'', image:'', excerpt:'' });
+    setFormData({
+      title: '', slug: '', content: '',
+      category: '', readTime: '',
+      image: '', excerpt: ''
+    });
     setSelectedBlog(null);
   };
 
@@ -90,7 +94,7 @@ const BlogAdmin = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 max-w-screen-lg mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 max-w-screen-lg mx-auto pt-10" >
       <h1 className="text-2xl md:text-3xl font-bold mb-6">Blog Admin Panel</h1>
 
       {error && (
@@ -140,102 +144,120 @@ const BlogAdmin = () => {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
-          <div className="bg-white w-full max-w-full sm:max-w-2xl md:max-w-3xl p-4 sm:p-6 md:p-8 rounded-lg shadow-lg overflow-auto max-h-screen">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="relative bg-white w-full max-w-full sm:max-w-2xl md:max-w-3xl rounded-lg shadow-lg flex flex-col h-full max-h-[90vh] overflow-hidden">
+            {/* Close */}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 text-xl text-gray-500 hover:text-gray-800"
+              className="absolute top-3 right-3 text-2xl text-gray-500 hover:text-gray-800 z-10"
             >
               &times;
             </button>
-            <h2 className="text-xl md:text-2xl font-semibold mb-4">
-              {selectedBlog ? 'Edit Blog' : 'Add New Blog'}
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Title */}
-                <div>
-                  <label className="block text-sm font-medium mb-1">Title</label>
-                  <input
-                    type="text"
-                    value={formData.title}
-                    onChange={e => setFormData({ ...formData, title: e.target.value })}
-                    className="w-full border p-2 rounded"
-                    required
-                  />
-                </div>
-                {/* Slug */}
-                <div>
-                  <label className="block text-sm font-medium mb-1">Slug</label>
-                  <input
-                    type="text"
-                    value={formData.slug}
-                    onChange={e => setFormData({ ...formData, slug: e.target.value })}
-                    className="w-full border p-2 rounded"
-                    required
-                  />
-                </div>
-                {/* Category */}
-                <div>
-                  <label className="block text-sm font-medium mb-1">Category</label>
-                  <input
-                    type="text"
-                    value={formData.category}
-                    onChange={e => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full border p-2 rounded"
-                    required
-                  />
-                </div>
-                {/* Read Time */}
-                <div>
-                  <label className="block text-sm font-medium mb-1">Read Time (min)</label>
-                  <input
-                    type="number"
-                    value={formData.readTime}
-                    onChange={e => setFormData({ ...formData, readTime: e.target.value })}
-                    className="w-full border p-2 rounded"
-                    required
-                  />
-                </div>
-                {/* Image URL */}
-                <div className="sm:col-span-2">
-                  <label className="block text-sm font-medium mb-1">Image URL</label>
-                  <input
-                    type="text"
-                    value={formData.image}
-                    onChange={e => setFormData({ ...formData, image: e.target.value })}
-                    className="w-full border p-2 rounded"
-                    required
-                  />
-                </div>
-                {/* Excerpt */}
-                <div className="sm:col-span-2">
-                  <label className="block text-sm font-medium mb-1">Excerpt</label>
-                  <input
-                    type="text"
-                    value={formData.excerpt}
-                    onChange={e => setFormData({ ...formData, excerpt: e.target.value })}
-                    className="w-full border p-2 rounded"
-                    required
-                  />
-                </div>
-                {/* Content */}
-                <div className="sm:col-span-2">
-                  <label className="block text-sm font-medium mb-1">Content</label>
-                  <ReactQuill
-                    theme="snow"
-                    value={formData.content}
-                    onChange={value => setFormData({ ...formData, content: value })}
-                    className="h-64"
-                  />
+
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col flex-1 overflow-hidden"
+            >
+              {/* Header */}
+              <div className="px-4 py-3 border-b">
+                <h2 className="text-xl md:text-2xl font-semibold">
+                  {selectedBlog ? 'Edit Blog' : 'Add New Blog'}
+                </h2>
+              </div>
+
+              {/* Body (scrollable) */}
+              <div className="px-4 py-4 sm:px-6 md:px-8 flex-1 overflow-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Title */}
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Title</label>
+                    <input
+                      type="text"
+                      value={formData.title}
+                      onChange={e => setFormData({ ...formData, title: e.target.value })}
+                      className="w-full border p-2 rounded"
+                      required
+                    />
+                  </div>
+
+                  {/* Slug */}
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Slug</label>
+                    <input
+                      type="text"
+                      value={formData.slug}
+                      onChange={e => setFormData({ ...formData, slug: e.target.value })}
+                      className="w-full border p-2 rounded"
+                      required
+                    />
+                  </div>
+
+                  {/* Category */}
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Category</label>
+                    <input
+                      type="text"
+                      value={formData.category}
+                      onChange={e => setFormData({ ...formData, category: e.target.value })}
+                      className="w-full border p-2 rounded"
+                      required
+                    />
+                  </div>
+
+                  {/* Read Time */}
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Read Time (min)</label>
+                    <input
+                      type="number"
+                      value={formData.readTime}
+                      onChange={e => setFormData({ ...formData, readTime: e.target.value })}
+                      className="w-full border p-2 rounded"
+                      required
+                    />
+                  </div>
+
+                  {/* Image URL */}
+                  <div className="sm:col-span-2">
+                    <label className="block text-sm font-medium mb-1">Image URL</label>
+                    <input
+                      type="text"
+                      value={formData.image}
+                      onChange={e => setFormData({ ...formData, image: e.target.value })}
+                      className="w-full border p-2 rounded"
+                      required
+                    />
+                  </div>
+
+                  {/* Excerpt */}
+                  <div className="sm:col-span-2">
+                    <label className="block text-sm font-medium mb-1">Excerpt</label>
+                    <input
+                      type="text"
+                      value={formData.excerpt}
+                      onChange={e => setFormData({ ...formData, excerpt: e.target.value })}
+                      className="w-full border p-2 rounded"
+                      required
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="sm:col-span-2">
+                    <label className="block text-sm font-medium mb-1">Content</label>
+                    <ReactQuill
+                      theme="snow"
+                      value={formData.content}
+                      onChange={value => setFormData({ ...formData, content: value })}
+                      className="h-48 sm:h-64"
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              {/* Footer (buttons fixed below) */}
+              <div className="px-4 py-3 sm:px-6 border-t flex flex-col sm:flex-row justify-end gap-3">
                 <button
                   type="submit"
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded text-center"
+                  className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
                 >
                   {selectedBlog ? 'Update Blog' : 'Create Blog'}
                 </button>
@@ -245,7 +267,7 @@ const BlogAdmin = () => {
                     resetForm();
                     setShowModal(false);
                   }}
-                  className="flex-1 bg-gray-500 hover:bg-gray-600 text-white py-2 rounded text-center"
+                  className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded"
                 >
                   Cancel
                 </button>
