@@ -3,10 +3,13 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   onAuthStateChanged,
-  // we remove signInWithEmailAndPassword since you're doing Google-only
   signOut,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  setPersistence,
+  browserLocalPersistence,
+  browserSessionPersistence
 } from 'firebase/auth';
 import { auth } from '../firebase';
 
@@ -36,6 +39,17 @@ export function AuthProvider({ children }) {
     // onAuthStateChanged will update `user`
   };
 
+   // — Email/password login for admins, with "remember me" persistence —
+  const login = async (email, password, remember) => {
+    // choose persistence
+    await setPersistence(
+      auth,
+      remember ? browserLocalPersistence : browserSessionPersistence
+    );
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
+
   const logout = () => signOut(auth);
 
   return (
@@ -44,10 +58,12 @@ export function AuthProvider({ children }) {
         user,
         loading,
         isAdmin,
-        // for admin-login page:
-        // login: async (email, pw) => signInWithEmailAndPassword(auth, email, pw),
+     
         signInWithGoogle,
+                login,
+
         logout
+
       }}
     >
       {children}
