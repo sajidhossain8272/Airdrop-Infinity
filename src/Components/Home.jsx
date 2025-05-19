@@ -4,7 +4,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import NewBlogsSection from "./NewBlogsSection";
 import { Link } from "react-router-dom";
-import TrendingProducts from "./TrendingProducts";
+// import TrendingProducts from "./TrendingProducts";
 
 const Home = () => {
   const particlesInit = async (engine) => {
@@ -109,8 +109,10 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-200 mb-8"
             >
-              Discover verified airdrops, earn $INF tokens, and optimize your setup with 
-              <span className="block mt-2 text-sm text-purple-300">curated AliExpress tech gear</span>
+   Discover verified airdrops, earn your $INF tokens, and 
+   <span className="block mt-2 text-sm text-purple-300">
+     expand your crypto expertise in Infinity Knowledge
+   </span>
             </motion.p>
 
             <motion.div
@@ -158,7 +160,7 @@ const Home = () => {
         </div>
       </section>
 
-   <TrendingProducts />
+   {/* <TrendingProducts /> */}
       {/* CTA Section */}
         <NewBlogsSection />
        

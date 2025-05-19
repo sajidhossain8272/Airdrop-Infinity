@@ -1,119 +1,256 @@
-import { NavLink, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { Title, Meta } from "react-head";
-import { HeadProvider } from "react-head";
-import { Helmet } from "react-helmet-async";
-import Spinner from "./Spinner";
+// src/Components/Airdrop.jsx
+import { useState, useEffect } from "react";
+import { useParams, NavLink }  from "react-router-dom";
+import { Helmet }              from "react-helmet-async";
+import Spinner                 from "./Spinner";
+import {
+  FaArrowLeft,
+  FaCheckCircle,
+  FaTimesCircle,
+  FaTasks,
+  FaExternalLinkAlt,
+  FaBitcoin,
+  FaEthereum
+} from "react-icons/fa";
+import {
+  SiSolana,
+} from "react-icons/si";
 
-const Airdrop = () => {
+export default function Airdrop() {
   const { id } = useParams();
-  const [item, setItem] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  // Replace with your actual API URL.
+  const [item, setItem]               = useState(null);
+  const [loading, setLoading]         = useState(true);
+  const [claimUrl, setClaimUrl]       = useState("");
+  const [cryptoPrices, setCryptoPrices] = useState({});
   const API_URL = "https://crypto-store-server.vercel.app/api/airdrops";
 
+  // 1) Load airdrop + claim URL
   useEffect(() => {
-    const fetchItem = async () => {
+    (async () => {
       try {
-        const res = await fetch(`${API_URL}/${id}`);
+        const res  = await fetch(`${API_URL}/${id}`);
         const data = await res.json();
         setItem(data);
-      } catch (err) {
-        console.error("Error fetching airdrop details:", err);
+        const [step1] = data.steps || [];
+        const urls    = step1?.match(/https?:\/\/[^\s]+/g);
+        if (urls?.[0]) setClaimUrl(urls[0]);
+      } catch (e) {
+        console.error(e);
       } finally {
         setLoading(false);
       }
-    };
+    })();
+  }, [id]);
 
-    fetchItem();
-  }, [id, API_URL]);
-
-  if (loading) return <div className="flex justify-center items-center min-h-screen min-w-screen"><Spinner /> </div>;
-  if (!item) return <div>No data available</div>;
-
-  // Function to convert URLs in a string to clickable links.
-  const renderStepWithLinks = (step) => {
-    const urlPattern = /https?:\/\/[^\s]+/g;
-    return step.split(urlPattern).map((part, index, array) => {
-      if (index < array.length - 1) {
-        const url = step.match(urlPattern)[index];
-        return (
-          <span key={index}>
-            {part}
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 underline lato-black"
-            >
-              Click Here
-            </a>
-          </span>
+  // 2) Load live prices
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch(
+          "https://api.coingecko.com/api/v3/simple/price?" +
+          "ids=bitcoin,ethereum,solana,&vs_currencies=usd"
         );
+        const data = await res.json();
+        setCryptoPrices(data);
+      } catch (e) {
+        console.error(e);
       }
-      return <span key={index}>{part}</span>;
-    });
+    })();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Spinner />
+      </div>
+    );
+  }
+  if (!item) {
+    return (
+      <div className="p-8 text-center text-xl text-red-500">
+        Oops—couldn’t load that airdrop.
+      </div>
+    );
+  }
+
+  const {
+    featured_title,
+    featured_image,
+    description,
+    price,
+    listed_price,
+    availability,
+    steps = [],
+    network,
+    network_logo,
+    task,
+    status
+  } = item;
+
+  // map coin → icon
+  const CoinIcon = {
+    bitcoin:  <FaBitcoin className="text-2xl sm:text-3xl"/>,
+    ethereum: <FaEthereum className="text-2xl sm:text-3xl"/>,
+    solana:   <SiSolana className="text-2xl sm:text-3xl"/>,
   };
 
   return (
-    <HeadProvider>
-      <div>
-        <Helmet>
-          <title>Airdrop Infinity | {item.featured_title}</title>
-        </Helmet>
-        <div className="p-8 lato-regular lg:pl-80 lg:pr-80">
-          <Title>{item.featured_title} - Airdrop Infinity</Title>
-          <Meta name="description" content={item.description} />
-          <div className="lg:flex lg:gap-10 lg:justify-center gap-10">
+    <div className="bg-gray-50 min-h-screen">
+      <Helmet>
+        <title>Airdrop Infinity | {featured_title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
+
+      {/* back link */}
+      <div className="px-4 sm:px-6 lg:px-16 py-4">
+        <NavLink
+          to="/listed-airdrop"
+          className="inline-flex items-center text-gray-700 hover:text-blue-600 transition"
+        >
+          <FaArrowLeft className="mr-2"/> Back
+        </NavLink>
+      </div>
+
+      {/* Hero */}
+      <div className="relative h-64 sm:h-72 md:h-96 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 flex flex-col items-center justify-center text-white px-4 sm:px-6 lg:px-16">
+        <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center drop-shadow-lg">
+          {featured_title}
+        </h1>
+        <p className="mt-2 text-xs sm:text-sm md:text-base lg:text-lg opacity-90 text-center max-w-xl">
+              {description}
+        </p>
+
+        {/* live prices */}
+        <div className="flex gap-3 sm:gap-4 md:gap-6 mt-4 sm:mt-6 overflow-x-auto">
+          {Object.entries(cryptoPrices).map(([coin, { usd }]) => (
+            <div
+              key={coin}
+              className="flex-shrink-0 bg-white bg-opacity-20 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-3 rounded-lg flex flex-col items-center"
+            >
+              {CoinIcon[coin]}
+              <span className="mt-1 uppercase text-[10px] sm:text-xs">{coin}</span>
+              <span className="font-bold text-sm sm:text-base">${usd.toLocaleString()}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* main CTA */}
+        {claimUrl && (
+          <a
+            href={claimUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 sm:mt-6 inline-flex items-center bg-gradient-to-r from-indigo-400 to-pink-400 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow hover:scale-105 transition"
+          >
+            Claim Airdrop <FaExternalLinkAlt className="ml-2"/>
+          </a>
+        )}
+      </div>
+
+      {/* content grid */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16 py-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* left */}
+        <aside className="space-y-6">
+          {/* 16:9 image */}
+          <div className="aspect-video w-full">
             <img
-              src={item.featured_image}
-              alt={item.featured_title}
-              className="w-fixed object-fit my-4 shadow-2xl rounded-3xl lg:w-[960px] lg:h-[540px]"
+              src={featured_image}
+              alt={featured_title}
+              className="w-full h-full object-cover rounded-lg shadow-lg"
             />
-            <div className="lg:pt-2 border-2 p-4">
-              <p className="text-lg lg:w-[500px]">{item.description}</p>
-              <br />
-              <h2 className="lato-bold">
-                Airdrop Est. <span className="text-green-500"> ${item.price} </span>
-              </h2>
-              <h2 className="lato-bold">
-                Listed Price <span className="text-green-500"> ${item.listed_price} </span>
-              </h2>
-              <br />
-              <h1 className="text-3xl lato-bold">
-                Step-by-Step Guide for {item.featured_title}
-              </h1>
-              <h2>{item.availability ? "Available" : "Not Available"}</h2>
-              <ol className="mt-4 space-y-2 list-decimal pl-5">
-                {item.steps.map((step, idx) => (
-                  <li key={idx} className="font-bold">
-                    {renderStepWithLinks(step)}
-                  </li>
-                ))}
-              </ol>
-              <br />
-              <h2 className="lato-regular">
-                <span className="lato-bold">Airdrop Network: </span>
-                {item.network}
-              </h2>
-              <h2 className="lato-regular">
-                <span className="lato-bold">Tasks: {item.task} </span>
-              </h2>
+          </div>
+
+          {/* metadata */}
+          <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <img
+                  src={network_logo}
+                  alt={network}
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
+                />
+                <span className="font-semibold">{network}</span>
+              </div>
+              {availability ? (
+                <span className="inline-flex items-center text-green-600 text-sm sm:text-base">
+                  <FaCheckCircle className="mr-1 text-base"/> Available
+                </span>
+              ) : (
+                <span className="inline-flex items-center text-red-600 text-sm sm:text-base">
+                  <FaTimesCircle className="mr-1 text-base"/> Not Available
+                </span>
+              )}
+            </div>
+            <div className="space-y-2 text-sm sm:text-base">
+              <p>
+                <span className="font-bold">Est. Airdrop:</span>{" "}
+                <span className="text-green-600">${price}</span>
+              </p>
+              <p>
+                <span className="font-bold">Listed Price:</span>{" "}
+                <span className="text-gray-700">{listed_price || "N/A"}</span>
+              </p>
+              <p className="flex items-center">
+                <FaTasks className="mr-2 text-gray-600"/> 
+                <div className="flex gap-2">
+                <span className="font-bold">Tasks:</span> <span> {task} </span> </div>
+              </p>
+              <p className="inline-block bg-indigo-100 text-indigo-800 rounded-full px-2 py-0.5 text-xs sm:text-sm">
+                Status: {status}
+              </p>
             </div>
           </div>
-        </div>
-        <div className="flex justify-center lg:justify-start lg:pl-8">
-          <NavLink
-            to="/"
-            className="btn text-white bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 lg:hidden"
-          >
-            Back to Home
-          </NavLink>
+        </aside>
+
+        {/* right */}
+        <div className="space-y-8">
+ 
+
+          <section className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+              Step-by-Step Guide
+            </h2>
+            <ol className="list-decimal list-inside space-y-2 sm:space-y-3 text-sm sm:text-base">
+              {steps.map((step, idx) => (
+                <li key={idx} className="text-gray-800">
+                  {step.split(/https?:\/\/[^\s]+/g).map((text, i, arr) => {
+                    if (i < arr.length - 1) {
+                      const url = step.match(/https?:\/\/[^\s]+/g)[i];
+                      return (
+                        <span key={i}>
+                          {text}
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-indigo-600 underline ml-1"
+                          >
+                            Visit Link
+                          </a>
+                        </span>
+                      );
+                    }
+                    return <span key={i}>{text}</span>;
+                  })}
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          {claimUrl && (
+            <div className="text-center">
+              <a
+                href={claimUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-gradient-to-r from-indigo-400 to-pink-400 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow hover:scale-105 transition"
+              >
+                Claim this Airdrop Now
+              </a>
+            </div>
+          )}
         </div>
       </div>
-    </HeadProvider>
+    </div>
   );
-};
-
-export default Airdrop;
+}
