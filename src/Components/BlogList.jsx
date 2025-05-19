@@ -212,7 +212,7 @@ const BlogList = () => {
                             {blog?.category || 'Uncategorized'}
                           </span>
                           <span className="text-sm text-gray-500">
-                            {blog?.readTime || '5 min read'}
+                                       🕒  {blog?.readTime || '5 min read'} min read
                           </span>
                         </div>
                         <h3 className="text-lg font-semibold mb-2">

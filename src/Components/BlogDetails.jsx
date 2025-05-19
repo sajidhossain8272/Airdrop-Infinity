@@ -100,7 +100,7 @@ const BlogDetails = () => {
               </div>
               <div className="flex items-center gap-2">
                 <FiClock className="text-lg" />
-                <span>{blog.readTime || "5 min read"}</span>
+                <span>{blog.readTime || "5 min read"} min read</span> 
               </div>
             </div>
             {blog.image && (

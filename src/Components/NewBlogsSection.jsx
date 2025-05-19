@@ -8,7 +8,8 @@ import {
   FaEthereum,
   FaHistory,
   FaChartLine,
-  FaRocket,
+  // eslint-disable-next-line no-unused-vars
+    FaRocket,
   FaArrowRight,
   FaGlobe,
   FaBolt,
@@ -149,18 +150,20 @@ const journeyItems = [
                 </span>
               </div>
 
-              {/* Title & Meta */}
-              <div className='p-6 flex-1 flex flex-col'>
-                <h3 className='text-xl font-semibold mb-4 flex-1'>
-                  {blog.title}
-                </h3>
-                <div className='flex justify-between text-gray-500 text-sm'>
-                  <span>{new Date(blog.date).toLocaleDateString()}</span>
-                  <span>{blog.readTime}</span>
-                </div>
-              </div>
+                      <div className='p-6 flex-1 flex flex-col'>
+                      <h3 className='text-xl font-semibold mb-4 flex-1'>
+                        {blog.title}
+                      </h3>
+                      <div className='flex justify-between text-gray-500 text-sm'>
+                        <span>{new Date(blog.date).toLocaleDateString()}</span>
+                        <span>
+                                    🕒 {blog.readTime}
+                        {blog.readTime && !blog.readTime.toLowerCase().includes("min") ? " min read" : ""}
+                        </span>
+                      </div>
+                      </div>
 
-              {/* Gradient Footer */}
+                      {/* Gradient Footer */}
               <Link
                 to={`/blog/${blog.slug}`}
                 className='block text-center py-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium hover:opacity-90 transition'
