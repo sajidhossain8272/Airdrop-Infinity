@@ -94,26 +94,27 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <motion.h1 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="lg:text-7xl text-4xl lato-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-            >
-              Something Big is coming! Stay Tuned
-            </motion.h1>
+          <motion.h1 
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2, duration: 0.6 }}
+  className="lg:text-7xl text-4xl lato-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 bg-clip-text text-transparent text-center"
+>
+  INF Mining Has Started — Grab Your Shares Now!
+</motion.h1>
 
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-xl text-gray-200 mb-8"
-            >
-   Discover verified airdrops, earn your $INF tokens, and 
-   <span className="block mt-2 text-sm text-purple-300">
-     expand your crypto expertise in Infinity Knowledge
-   </span>
-            </motion.p>
+<motion.p 
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.4, duration: 0.6 }}
+  className="text-lg text-gray-200 mb-8 text-center"
+>
+  Discover verified airdrops, earn your $INF tokens, and 
+  <span className="block mt-2 text-sm text-purple-300">
+    grow your crypto knowledge with Infinity Academy
+  </span>
+</motion.p>
+
 
             <motion.div
               initial={{ scale: 0.9 }}
