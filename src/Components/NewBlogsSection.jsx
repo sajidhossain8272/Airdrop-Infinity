@@ -12,7 +12,6 @@ import {
     FaRocket,
   FaArrowRight,
   FaGlobe,
-  FaBolt,
   FaGift,
   FaSearchDollar,
   FaHammer,
@@ -90,7 +89,7 @@ const journeyItems = [
   },
   {
     icon: <FaHammer />,
-    text: "Start mining $INF tokens with our Telegram Bot",
+    text: "Claim $INF token airdrop",
   },
   {
     icon: <FaBookOpen />,
@@ -315,8 +314,7 @@ const journeyItems = [
             Learn More <FaArrowRight className="ml-2" />
           </Link>
 
-          {/* Highlighted Mining Button */}
-          <a
+          {/* <a
             href="https://t.me/airdropinfinitibot"
             target="_blank"
             rel="noopener noreferrer"
@@ -324,7 +322,7 @@ const journeyItems = [
           >
             <FaBolt className="mr-2" />
             Start Mining INF
-          </a>
+          </a> */}
         </div>
       </div>
     </motion.div>
