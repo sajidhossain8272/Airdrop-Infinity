@@ -76,7 +76,7 @@ const Nav = () => {
                   }
                   onClick={closeMobileMenu}
                 >
-              <FaReadme className="inline-block ml-1 text-lg" />     Infinity Knowledge
+              <FaReadme className="inline-block ml-1 text-lg" />     Infinity Academy
                 </NavLink>
               </li>
               <li>
@@ -142,7 +142,7 @@ const Nav = () => {
                   `btn btn-ghost text-lg ${isActive ? "bg-black text-white" : ""}`
                 }
               >
-          <FaReadme className="inline-block ml-1 text-lg" />      Infinity Knowledge 
+          <FaReadme className="inline-block ml-1 text-lg" />      Infinity Academy 
               </NavLink>
             </li>
             <li>
