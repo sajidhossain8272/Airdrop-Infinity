@@ -58,75 +58,76 @@ const BlogDetails = () => {
         <meta name='description' content={description} />
         <link rel='canonical' href={window.location.href} />
 
-        {/* Open Graph */}
-        <meta
-          property='og:title'
-          content={blog.title + " | Airdrop Infinity"}
-        />
-        <meta property='og:description' content={description} />
-        <meta property='og:type' content='article' />
-        <meta property='og:url' content={window.location.href} />
-        {blog.image && (
           <meta
-            property='og:image'
-            content={
-              blog.image.startsWith("http")
-                ? blog.image
-                : `${window.location.origin}/${blog.image}`
-            }
+            property='og:title'
+            content={blog.title + " | Airdrop Infinity"}
           />
-        )}
-      </Helmet>
+          <meta property='og:description' content={description} />
+          <meta property='og:type' content='article' />
+          <meta property='og:url' content={window.location.href} />
+          {blog.image && (
+            <meta
+              property='og:image'
+              content={
+                blog.image.startsWith("http")
+            ? blog.image
+            : `${window.location.origin}/${blog.image}`
+              }
+            />
+          )}
+              </Helmet>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className='min-h-screen bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5'
-      >
-        <article className='max-w-4xl mx-auto px-4 py-12'>
-          <div className='mb-6'>
-            <Link to='/blog' className='text-blue-600 hover:underline'>
-              &larr; Read all articles
-            </Link>
-          </div>
-
-          <header className='mb-12'>
-            <motion.h1
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
-              className='text-4xl lg:text-5xl font-bold mb-6 leading-tight'
-            >
-              {blog.title}
-            </motion.h1>
-            <div className='flex items-center gap-4 text-gray-600 mb-8'>
-              <div className='flex items-center gap-2'>
-                <FiCalendar className='text-lg' />
-                <span>
-                  {new Date(blog.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <FiClock className='text-lg' />
-                <span>{blog.readTime || "5 min read"} min read</span>
-              </div>
+              <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className='min-h-screen bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5'
+              >
+          <article className='max-w-4xl mx-auto px-4 py-12'>
+            <div className='mb-6'>
+              <Link to='/blog' className='text-blue-600 hover:underline'>
+                &larr; Read all articles
+              </Link>
             </div>
-            {blog.image && (
-              <motion.img
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                src={blog.image}
-                alt={blog.title}
-                className='w-full h-96 object-cover rounded-xl mb-8'
-                loading='lazy'
-              />
-            )}
-          </header>
 
-          {/* Content */}
+            <header className='mb-12'>
+              <motion.h1
+                initial={{ y: 20 }}
+                animate={{ y: 0 }}
+                className='text-4xl lg:text-5xl font-bold mb-6 leading-tight'
+              >
+                {blog.title}
+              </motion.h1>
+              <div className='flex items-center gap-4 text-gray-600 mb-8'>
+                <div className='flex items-center gap-2'>
+            <FiCalendar className='text-lg' />
+            <span>
+              {new Date(blog.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </span>
+                </div>
+                <div className='flex items-center gap-2'>
+            <FiClock className='text-lg' />
+            <span>{blog.readTime || "5 min read"} min read</span>
+                </div>
+              </div>
+              {blog.image && (
+                <div className="w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              src={blog.image}
+              alt={blog.title}
+              className='w-full h-full object-cover'
+              loading='lazy'
+            />
+                </div>
+              )}
+            </header>
+
+            {/* Content */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

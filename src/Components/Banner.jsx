@@ -26,7 +26,7 @@ const Banner = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen min-w-screen">
+      <div className="flex justify-center items-center min-h-screen min-w-screen dark:bg-gray-900">
         <Spinner />
       </div>
     );
@@ -38,17 +38,17 @@ const Banner = () => {
   const exchangeData = airdrops.filter(item => item.category === "exchange");
 
   return (
-    <div className="lato-regular bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5 overflow-hidden">
+    <div className="lato-regular bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5 overflow-hidden dark:from-gray-900/80 dark:via-gray-900/90 dark:to-gray-900/80">
       {/* Hero Title */}
-      <h1 className="text-3xl lg:text-6xl font-black px-8 pt-8 lg:pt-12 lg:px-96">
+      <h1 className="text-3xl lg:text-6xl font-black px-8 pt-8 lg:pt-12 lg:px-96 text-gray-900 dark:text-white">
         Airdrop Infinity
         <br className="hidden lg:block"/>
-        <span className="text-indigo-600"> – the best crypto airdrops of 2025!</span>
+        <span className="text-indigo-600 dark:text-indigo-400"> – the best crypto airdrops of 2025!</span>
       </h1>
 
       {/* Exchange Referral Banner Carousel */}
       <section aria-label="Exchange Referral Programs" className="mt-8 px-4 lg:px-96">
-        <h2 className="text-2xl font-bold mb-4">Exchange Referral Programs</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Exchange Referral Programs</h2>
         <div
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4"
           style={{ scrollPadding: "0 1rem" }}
@@ -57,18 +57,18 @@ const Banner = () => {
             <Link
               key={item.featured_id}
               to={`/airdrop/${item.featured_id}`}
-              className="relative flex-shrink-0 w-72 aspect-video snap-center rounded-lg overflow-hidden shadow-lg transform transition hover:scale-105"
+              className="relative flex-shrink-0 w-72 aspect-video snap-center rounded-lg overflow-hidden shadow-lg transform transition hover:scale-105 bg-white dark:bg-gray-800"
             >
               <img
                 src={item.featured_image}
                 alt={item.featured_title}
                 className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-4">
+              <div className="absolute inset-0 bg-black bg-opacity-40 dark:bg-opacity-60 flex flex-col justify-center items-start p-4">
                 <h3 className="text-lg font-bold text-white truncate">
                   {item.featured_title}
                 </h3>
-                <p className="text-sm text-gray-200 mt-1 truncate">
+                <p className="text-sm text-gray-200 dark:text-gray-300 mt-1 truncate">
                   {item.network} • {item.type}
                 </p>
               </div>
@@ -77,7 +77,7 @@ const Banner = () => {
         </div>
       </section>
 
-      <hr className="my-8 border-0 h-px bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-4 lg:mx-96" />
+      <hr className="my-8 border-0 h-px bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-4 lg:mx-96 dark:from-indigo-700 dark:via-purple-700 dark:to-pink-700" />
 
       {/* Scrolling Featured Marquee */}
       <div className="relative lg:w-3/5 lg:ml-96 overflow-x-auto">
@@ -86,7 +86,7 @@ const Banner = () => {
             <Link
               key={item.featured_id}
               to={`/airdrop/${item.featured_id}`}
-              className="card w-56 flex-shrink-0 aspect-video shadow-2xl hover:scale-105 transition-transform duration-300"
+              className="card w-56 flex-shrink-0 aspect-video shadow-2xl hover:scale-105 transition-transform duration-300 bg-white dark:bg-gray-800"
             >
               <img
                 src={item.featured_image}
@@ -94,10 +94,10 @@ const Banner = () => {
                 className="object-cover w-full h-full"
               />
               <div className="card-body p-2">
-                <h4 className="card-title text-center text-sm truncate">
+                <h4 className="card-title text-center text-sm truncate text-gray-900 dark:text-gray-100">
                   {item.featured_title}
                 </h4>
-                <div className="flex justify-center gap-1 text-xs text-gray-600">
+                <div className="flex justify-center gap-1 text-xs text-gray-600 dark:text-gray-400">
                   <span>{item.type}</span>
                   <span>{item.type2}</span>
                 </div>
@@ -133,8 +133,8 @@ const CategorySection = ({ title, data }) => {
   }, [data.length]);
 
   return (
-    <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
-      <h3 className="bg-indigo-600 text-white text-xl font-semibold px-4 py-2">
+    <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 dark:border dark:border-gray-800">
+      <h3 className="bg-indigo-600 text-white text-xl font-semibold px-4 py-2 dark:bg-indigo-700">
         {title}
       </h3>
       <div className="p-4 grid gap-4 sm:grid-cols-2">
@@ -142,7 +142,7 @@ const CategorySection = ({ title, data }) => {
           <Link
             key={item.featured_id}
             to={`/airdrop/${item.featured_id}`}
-            className="flex flex-col bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition"
+            className="flex flex-col bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
           >
             {/* HD 16:9 wrapper */}
             <div className="w-full aspect-video">
@@ -154,10 +154,10 @@ const CategorySection = ({ title, data }) => {
             </div>
 
             <div className="p-3 flex flex-col flex-1 justify-between">
-              <h4 className="font-bold text-sm mb-1 truncate">{item.featured_title}</h4>
-              <div className="flex justify-between items-center text-xs text-gray-500">
+              <h4 className="font-bold text-sm mb-1 truncate text-gray-900 dark:text-gray-100">{item.featured_title}</h4>
+              <div className="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
                 <span>{item.network}</span>
-                <span className="font-semibold text-green-600">${item.price}</span>
+                <span className="font-semibold text-green-600 dark:text-green-400">${item.price}</span>
               </div>
             </div>
           </Link>
