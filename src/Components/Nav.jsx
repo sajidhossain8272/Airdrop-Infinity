@@ -126,13 +126,13 @@ const Nav = () => {
       {/* Fullscreen Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-[999] bg-black/70 flex items-start justify-end lg:hidden transition-all"
+          className="fixed inset-0 z-[999] bg-black/70 flex items-start justify-end lg:hidden transition-all dark:text-gray-50"
           aria-modal="true"
           role="dialog"
         >
           <div
             ref={menuRef}
-            className="w-full h-full bg-base-100 flex flex-col pt-8 px-6 animate-slide-in"
+            className="w-full h-full bg-base-100 flex flex-col pt-8 px-6 animate-slide-in "
           >
             <div className="flex justify-between items-center mb-8">
               <Link
@@ -180,7 +180,7 @@ const Nav = () => {
                       `flex items-center text-xl px-4 py-3 rounded-lg transition-colors ${
                         isActive
                           ? "bg-black text-white"
-                          : "hover:bg-gray-100 text-gray-900"
+                          : "hover:bg-gray-100 text-gray-900 dark:hover:bg-gray-800 dark:text-gray-200"
                       }`
                     }
                     onClick={closeMobileMenu}

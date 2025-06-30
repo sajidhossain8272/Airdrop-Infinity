@@ -133,8 +133,10 @@ const CategorySection = ({ title, data }) => {
   }, [data.length]);
 
   return (
-    <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 dark:border dark:border-gray-800">
-      <h3 className="bg-indigo-600 text-white text-xl font-semibold px-4 py-2 dark:bg-indigo-700">
+    <div className="w-full max-w-md rounded-xl shadow-xl overflow-hidden border border-[#e0e7ff] bg-gradient-to-br from-[#eaf3ff] via-[#fbeaff] to-[#fdf6fb] dark:from-[#232946] dark:via-[#181c2e] dark:to-[#1a1c2b] dark:border-[#2e3561]">
+      <h3
+        className="bg-gradient-to-r from-[#4f8cfb] via-[#c471ed] to-[#f64f59] text-transparent bg-clip-text text-xl font-extrabold px-4 py-2 tracking-wide shadow-sm"
+      >
         {title}
       </h3>
       <div className="p-4 grid gap-4 sm:grid-cols-2">
@@ -142,10 +144,10 @@ const CategorySection = ({ title, data }) => {
           <Link
             key={item.featured_id}
             to={`/airdrop/${item.featured_id}`}
-            className="flex flex-col bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition dark:bg-gray-800"
+            className="flex flex-col rounded-lg overflow-hidden hover:shadow-lg transition border border-[#d1d5fa] hover:border-[#a259f7] bg-[#f7faff] dark:bg-[#232946] dark:border-[#3b4070] dark:hover:border-[#a259f7]"
           >
             {/* HD 16:9 wrapper */}
-            <div className="w-full aspect-video">
+            <div className="w-full aspect-video bg-gradient-to-r from-[#bae6fd]/20 via-[#fbeaff]/20 to-[#fdf6fb]/20 dark:from-[#5f6fff]/10 dark:via-[#a259f7]/10 dark:to-[#ff6fae]/10">
               <img
                 src={item.featured_image}
                 alt={item.featured_title}
@@ -154,10 +156,10 @@ const CategorySection = ({ title, data }) => {
             </div>
 
             <div className="p-3 flex flex-col flex-1 justify-between">
-              <h4 className="font-bold text-sm mb-1 truncate text-gray-900 dark:text-gray-100">{item.featured_title}</h4>
-              <div className="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
-                <span>{item.network}</span>
-                <span className="font-semibold text-green-600 dark:text-green-400">${item.price}</span>
+              <h4 className="font-bold text-sm mb-1 truncate text-[#232946] dark:text-[#e0e6ff]">{item.featured_title}</h4>
+              <div className="flex justify-between items-center text-xs">
+                <span className="text-[#60a5fa] dark:text-[#a259f7]">{item.network}</span>
+                <span className="font-semibold text-[#f472b6] dark:text-[#ff6fae]">${item.price}</span>
               </div>
             </div>
           </Link>
