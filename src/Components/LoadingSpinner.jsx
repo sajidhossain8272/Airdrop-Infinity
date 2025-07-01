@@ -18,5 +18,6 @@ export const ErrorDisplay = ({ message }) => (
     >
       Try Again
     </button>
+    
   </div>
 );
