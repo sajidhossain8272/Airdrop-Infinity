@@ -92,7 +92,7 @@ const BlogList = () => {
     <>
       {/* --- SEO Meta Tags --- */}
       <Helmet>
-        <title>Crypto Blog – Airdrop Infinity</title>
+        <title>Infinity Academy – Airdrop Infinity</title>
         <meta
           name="description"
           content={`Browse ${blogs.length} articles on crypto, airdrops, trading strategies, and blockchain insights.`}
