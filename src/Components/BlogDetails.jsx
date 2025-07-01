@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
@@ -7,13 +7,15 @@ import { Helmet } from "react-helmet-async";
 import Spinner from "./Spinner";
 
 const SITE_URL = "https://www.airdropinfinity.com"; // Change to your prod domain
-const DEFAULT_IMAGE = `${SITE_URL}/default-blog-thumbnail.jpg`; // fallback image
+const DEFAULT_IMAGE = `${SITE_URL}/Banner-3.png`; // fallback image
 
 const BlogDetails = () => {
   const { slug } = useParams();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [progress, setProgress] = useState(0);
+  const articleRef = useRef(null);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -31,6 +33,41 @@ const BlogDetails = () => {
     };
     fetchBlog();
   }, [slug]);
+
+  // Progress bar effect (works for whole page)
+  useEffect(() => {
+    function updateProgress() {
+      const article = articleRef.current;
+      if (!article) {
+        setProgress(0);
+        return;
+      }
+      // const articleRect = article.getBoundingClientRect();
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const articleTop = article.offsetTop;
+      const articleHeight = article.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      if (scrollTop < articleTop) {
+        setProgress(0);
+        return;
+      }
+      const totalScrollable = articleHeight - windowHeight;
+      const currentScrolled = scrollTop - articleTop;
+      let percent = (currentScrolled / totalScrollable) * 100;
+      percent = Math.max(0, Math.min(100, percent));
+      setProgress(percent);
+    }
+
+    window.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
+    // Recalculate on mount
+    setTimeout(updateProgress, 400);
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+    };
+  }, [loading]);
 
   if (loading) {
     return (
@@ -91,7 +128,7 @@ const BlogDetails = () => {
         <meta name='twitter:url' content={canonicalUrl} />
 
         {/* Article structured data (optional for advanced SEO) */}
-        <script type="application/ld+json">
+        <script type='application/ld+json'>
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
@@ -108,24 +145,32 @@ const BlogDetails = () => {
               name: "Airdrop Infinity",
               logo: {
                 "@type": "ImageObject",
-                url: `${SITE_URL}/logo192.png`
-              }
+                url: `${SITE_URL}/logo192.png`,
+              },
             },
             description: description,
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": canonicalUrl
-            }
+              "@id": canonicalUrl,
+            },
           })}
         </script>
       </Helmet>
+
+      {/* Reading progress bar */}
+      <div className="fixed lg:top-20 top-16 left-0 w-full h-1 z-50 bg-transparent">
+        <div
+          className="h-1 bg-gradient-to-r from-blue-500 via-fuchsia-500 to-pink-500 transition-all duration-100"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className='min-h-screen bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5'
       >
-        <article className='max-w-4xl mx-auto px-4 py-12'>
+        <article ref={articleRef} className='max-w-4xl mx-auto px-4 py-12'>
           <div className='mb-6'>
             <Link to='/blog' className='text-blue-600 hover:underline'>
               &larr; Read all articles
@@ -135,7 +180,13 @@ const BlogDetails = () => {
             <motion.h1
               initial={{ y: 20 }}
               animate={{ y: 0 }}
-              className='text-4xl lg:text-5xl font-bold mb-6 leading-tight'
+              className='
+                break-words
+                text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                font-bold mb-6 leading-tight
+                text-gray-900 dark:text-white
+                '
+              style={{ wordBreak: "break-word" }}
             >
               {blog.title}
             </motion.h1>
@@ -156,7 +207,7 @@ const BlogDetails = () => {
               </div>
             </div>
             {image && (
-              <div className="w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
+              <div className='w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden'>
                 <motion.img
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
