@@ -258,11 +258,6 @@ const BlogDetails = () => {
               </button>
             </div>
           </footer>
-          <section className='mt-12'>
-            <h2 className='text-2xl font-bold mb-6 flex items-center gap-2'>
-              <FiMessageCircle className='text-purple-600' />0 Comments
-            </h2>
-          </section>
         </article>
       </motion.div>
     </>
