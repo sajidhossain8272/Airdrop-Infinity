@@ -30,6 +30,11 @@ export default function NewBlogsSection() {
   const [loadingBlogs, setLoadingBlogs] = useState(true);
   const [prices, setPrices] = useState([]);
   const [loadingPrices, setLoadingPrices] = useState(true);
+  // Inside your NewBlogsSection component, add at the top:
+const [imageLoadedMap, setImageLoadedMap] = useState({});
+const handleImageLoad = (id) => {
+  setImageLoadedMap((m) => ({ ...m, [id]: true }));
+};
 
   // — fetch blogs
   useEffect(() => {
@@ -152,65 +157,74 @@ export default function NewBlogsSection() {
           Learn How Millions Are Succeeding with Crypto
         </motion.h2>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-          {blogs.slice(0, 3).map((blog) => (
-            <motion.div
-              key={blog._id || blog.id}
-              whileHover={{ scale: 1.02 }}
-              className='bg-white dark:bg-gray-900 rounded-3xl shadow-xl overflow-hidden flex flex-col border border-gray-200 dark:border-gray-800 transition-colors'
-            >
-                    <Link to={`/blog/${blog.slug}`} className="block overflow-hidden">
-                <img
-                  src={blog.image /* ensure your API returns an `image` URL */}
-                  alt={blog.title}
-                  loading="lazy"
-                  className="w-full h-ful object-cover"
-                />
-              </Link>
-              {/* Category Pill */}
-              <div className='px-6 pt-6'>
-                <span className='inline-block bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium'>
-                  {blog.category}
-                </span>
-              </div>
-
-              <div className='p-6 flex-1 flex flex-col'>
-                <h3 className='text-xl font-semibold mb-2 flex-1 text-gray-900 dark:text-white'>
-                  {blog.title}
-                </h3>
-                 <p
-    className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed overflow-hidden mb-2"
-    style={{
-      display: "-webkit-box",
-      WebkitLineClamp: 3,
-      WebkitBoxOrient: "vertical",
-    }}
-  >
-    {blog.excerpt /* or blog.content */}
-  </p>
-                <div className='flex justify-between text-gray-500 dark:text-gray-400 text-sm'>
-                  <span>{new Date(blog.date).toLocaleDateString()}</span>
-                  <span>
-                    🕒 {blog.readTime}
-                    {blog.readTime &&
-                    !blog.readTime.toLowerCase().includes("min")
-                      ? " min read"
-                      : ""}
-                  </span>
-                </div>
-              </div>
-
-
-              {/* Gradient Footer */}
-              <Link
-                to={`/blog/${blog.slug}`}
-                className='block text-center py-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium hover:opacity-90 transition'
-              >
-                Read More →
-              </Link>
-            </motion.div>
-          ))}
+     {/* ── Blog Cards Grid (with skeletons and fade‑in images) ── */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+  {blogs.slice(0, 3).map((blog) => {
+    const loaded = imageLoadedMap[blog.id] || false;
+    return (
+      <motion.div
+        key={blog._id || blog.id}
+        whileHover={{ scale: 1.02 }}
+        className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl overflow-hidden flex flex-col border border-gray-200 dark:border-gray-800 transition-colors"
+      >
+        {/* image + per‑card skeleton */}
+        <div className="relative flex-shrink-0 h-48 md:h-56 lg:h-64 w-full">
+          {!loaded && (
+            <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse rounded-t-3xl" />
+          )}
+          <motion.img
+            src={blog.image}
+            alt={blog.title}
+            loading="lazy"
+            onLoad={() => handleImageLoad(blog.id)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: loaded ? 1 : 0 }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-full object-cover rounded-t-3xl"
+          />
         </div>
+
+        {/* rest of card */}
+        <div className="px-6 pt-6">
+          <span className="inline-block bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium">
+            {blog.category}
+          </span>
+        </div>
+
+        <div className="p-6 flex-1 flex flex-col">
+          <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+            {blog.title}
+          </h3>
+          <p
+            className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed overflow-hidden mb-4"
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+            }}
+          >
+            {blog.excerpt}
+          </p>
+          <div className="mt-auto flex justify-between text-gray-500 dark:text-gray-400 text-sm">
+            <span>{new Date(blog.date).toLocaleDateString()}</span>
+            <span>
+              🕒 {blog.readTime}
+              {!blog.readTime.toLowerCase().includes("min") && " min read"}
+            </span>
+          </div>
+        </div>
+
+        <Link
+          to={`/blog/${blog.slug}`}
+          className="block text-center py-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium hover:opacity-90 transition"
+        >
+          Read More →
+        </Link>
+      </motion.div>
+    );
+  })}
+</div>
+
 
         <div className='mt-12 text-center'>
           <Link
