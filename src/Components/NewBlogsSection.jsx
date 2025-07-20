@@ -159,6 +159,14 @@ export default function NewBlogsSection() {
               whileHover={{ scale: 1.02 }}
               className='bg-white dark:bg-gray-900 rounded-3xl shadow-xl overflow-hidden flex flex-col border border-gray-200 dark:border-gray-800 transition-colors'
             >
+                    <Link to={`/blog/${blog.slug}`} className="block overflow-hidden">
+                <img
+                  src={blog.image /* ensure your API returns an `image` URL */}
+                  alt={blog.title}
+                  loading="lazy"
+                  className="w-full h-ful object-cover"
+                />
+              </Link>
               {/* Category Pill */}
               <div className='px-6 pt-6'>
                 <span className='inline-block bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium'>
@@ -167,9 +175,19 @@ export default function NewBlogsSection() {
               </div>
 
               <div className='p-6 flex-1 flex flex-col'>
-                <h3 className='text-xl font-semibold mb-4 flex-1 text-gray-900 dark:text-white'>
+                <h3 className='text-xl font-semibold mb-2 flex-1 text-gray-900 dark:text-white'>
                   {blog.title}
                 </h3>
+                 <p
+    className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed overflow-hidden mb-2"
+    style={{
+      display: "-webkit-box",
+      WebkitLineClamp: 3,
+      WebkitBoxOrient: "vertical",
+    }}
+  >
+    {blog.excerpt /* or blog.content */}
+  </p>
                 <div className='flex justify-between text-gray-500 dark:text-gray-400 text-sm'>
                   <span>{new Date(blog.date).toLocaleDateString()}</span>
                   <span>
@@ -181,6 +199,7 @@ export default function NewBlogsSection() {
                   </span>
                 </div>
               </div>
+
 
               {/* Gradient Footer */}
               <Link
