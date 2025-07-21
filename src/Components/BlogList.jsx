@@ -86,6 +86,11 @@ const BlogList = () => {
     window.scrollTo(0, 0);
   }, [selectedCategory, debouncedSearch, sortBy]);
 
+  // Scroll to top on page change
+useEffect(() => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}, [page]);
+
   // Show scroll-top button
   useEffect(() => {
     const onScroll = () => setShowScrollTop(window.pageYOffset > 300);
