@@ -41,6 +41,7 @@ import InfinityDropBot from "./Components/InfinityDropBot.jsx";
 import ProtectedRoute from "./auth/ProtectedRoute.jsx";
 import UserLogin from "./auth/UserLogin.jsx";
 import Privacy from "./Components/Privacy.jsx";
+import Terms from "./Components/Terms.jsx";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,8 @@ const router = createBrowserRouter([
       { path: "airdrop/:id", element: <Airdrop /> },
       { path: "construction", element: <Construction /> },
       { path: "privacy-policy", element: <Privacy /> },
+      { path: "terms-and-condition", element: <Terms /> },
+
       { path: "infinity-drop", element: <InfinityDrop /> },
       { path: "listed-airdrop", element: <ListedAirdrop /> },
       { path: "blog", element: <BlogList /> },

@@ -68,6 +68,7 @@ const Footer = () => {
             </a>
           </div>
         </nav>
+        <div className="flex gap-4">
         <div className="mt-6">
           <Link
             to="/privacy-policy"
@@ -75,6 +76,15 @@ const Footer = () => {
           >
             Privacy Policy
           </Link>
+        </div>
+          <div className="mt-6">
+          <Link
+            to="/terms-and-condition"
+            className="text-sm underline text-fuchsia-600 dark:text-fuchsia-400 hover:text-fuchsia-800 dark:hover:text-fuchsia-200 transition-colors"
+          >
+            Terms and Condition
+          </Link>
+        </div>
         </div>
         <p className="lg:pl-96 lg:pr-96 mt-6 text-sm text-gray-600 dark:text-gray-400">
           <span className="lato-bold">Disclaimer:</span> The information provided on the Airdrop Infinity website is solely for informational purposes and should not be interpreted as investment advice, financial advice, trading advice, or any other kind of advice. Airdrop Infinity expressly disclaims any recommendations, endorsements, or guidance for the purchase, sale, or retention of any cryptocurrency. Visitors and users of this website should perform their own extensive research and consult with a qualified financial advisor before making any investment decisions.
