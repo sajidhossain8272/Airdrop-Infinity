@@ -92,6 +92,8 @@ const Footer = () => {
         <p className="lato-bold text-md mt-4 text-gray-700 dark:text-gray-300">
           Copyright © {new Date().getFullYear()} - All rights reserved
         </p>
+          <p>Advertisements</p>
+
       </aside>
     </footer>
   );
