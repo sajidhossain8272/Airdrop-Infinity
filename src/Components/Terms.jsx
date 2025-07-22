@@ -1,10 +1,6 @@
 const Terms = () => {
   // Today's date in long format
-  const today = new Date().toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const today = "July 23, 2025"
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg mt-10 mb-10 transition-colors duration-300">
