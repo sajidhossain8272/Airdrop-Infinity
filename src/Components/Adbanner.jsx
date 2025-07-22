@@ -1,22 +1,35 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function AdBanner() {
+  const adRef = useRef(null);
+
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.innerHTML = `
+    if (!adRef.current) return;
+
+    // Inject the ad options script
+    const optionsScript = document.createElement('script');
+    optionsScript.type = 'text/javascript';
+    optionsScript.innerHTML = `
       atOptions = {
-        'key' : '5c5030dbcab36b13735ff4aba9513e04',
+        'key' : '1fe444ce385d32ed8ca503408bbf8ddb',
         'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
+        'height' : 60,
+        'width' : '100%',
         'params' : {}
       };
     `;
-    document.getElementById('ad-container')?.appendChild(script);
+    adRef.current.appendChild(optionsScript);
+
+    // Inject the invoke script
+    const invokeScript = document.createElement('script');
+    invokeScript.type = 'text/javascript';
+    invokeScript.src = '//www.highperformanceformat.com/1fe444ce385d32ed8ca503408bbf8ddb/invoke.js';
+    adRef.current.appendChild(invokeScript);
   }, []);
 
   return (
-    <div id="ad-container"></div>
+    <div style={{ width: '100%', overflow: 'hidden' }}>
+      <div ref={adRef} style={{ width: '100%' }}></div>
+    </div>
   );
 }
