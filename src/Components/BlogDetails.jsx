@@ -2,9 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { FiClock, FiCalendar, FiShare2, FiMessageCircle } from "react-icons/fi";
+import { FiClock, FiCalendar, FiShare2 } from "react-icons/fi";
 import { Helmet } from "react-helmet-async";
 import Spinner from "./Spinner";
+import AdBanner from "./Adbanner";
+
 
 const SITE_URL = "https://www.airdropinfinity.com"; // Change to your prod domain
 const DEFAULT_IMAGE = `${SITE_URL}/Banner-3.png`; // fallback image
@@ -17,6 +19,7 @@ const BlogDetails = () => {
   const [progress, setProgress] = useState(0);
   const articleRef = useRef(null);
 
+  
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -101,6 +104,7 @@ const BlogDetails = () => {
 
   // Canonical/OG/Twitter URLs
   const canonicalUrl = `${SITE_URL}/blog/${blog.slug}`;
+  
 
   return (
     <>
@@ -170,6 +174,8 @@ const BlogDetails = () => {
         animate={{ opacity: 1 }}
         className='min-h-screen bg-gradient-to-r from-blue-900/5 via-purple-700/5 to-pink-600/5'
       >
+        <AdBanner />
+
         <article ref={articleRef} className='max-w-4xl mx-auto px-4 py-12'>
           <div className='mb-6'>
             <Link to='/blog' className='text-blue-600 hover:underline'>
