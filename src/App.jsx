@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
 import "./App.css";
-import AdBanner from "./Components/Adbanner";
+// import AdBanner from "./Components/Adbanner";
 
 function App() {
   return (
@@ -49,7 +49,7 @@ function App() {
           `}
         </script>
       </Helmet>
-<AdBanner /> 
+{/* <AdBanner />  */}
       <Nav />
       <main className="min-h-[calc(100vh-160px)]">
         <Outlet /> {/* This renders nested routes */}
