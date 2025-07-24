@@ -14,6 +14,7 @@ const ListedAirdrop = () => {
 
         <Banner />
       </HeadProvider>
+      
     </div>
   )
 }
