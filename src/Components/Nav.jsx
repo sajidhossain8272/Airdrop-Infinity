@@ -24,6 +24,11 @@ const navLinks = [
     label: "Infinity Drop",
     icon: <FaFire className="inline-block mr-2 text-lg" />,
   },
+  {
+    to: "/contra-verification",
+    label: "Contra Verification",
+    icon: <FaReadme className="inline-block mr-2 text-lg" />,
+  },
 ];
 
 const Nav = () => {
