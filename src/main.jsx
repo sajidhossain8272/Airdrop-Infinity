@@ -43,6 +43,8 @@ import UserLogin from "./auth/UserLogin.jsx";
 import Privacy from "./Components/Privacy.jsx";
 import Terms from "./Components/Terms.jsx";
 
+
+import ContraVerfication from "./Components/ContraVerfication.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -90,6 +92,11 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+    errorElement: <ErrorBoundary />,
+  },
+    {
+    path: "/contra-verification",
+    element: <ContraVerfication />,
     errorElement: <ErrorBoundary />,
   },
   {
