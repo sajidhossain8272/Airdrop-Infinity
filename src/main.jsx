@@ -42,7 +42,7 @@ import ProtectedRoute from "./auth/ProtectedRoute.jsx";
 import UserLogin from "./auth/UserLogin.jsx";
 import Privacy from "./Components/Privacy.jsx";
 import Terms from "./Components/Terms.jsx";
-import ContraVerification from "./Components/ContraVerification.js";
+import ContraVerification from "./Components/ContraVerification.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
