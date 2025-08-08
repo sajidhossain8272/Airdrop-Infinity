@@ -42,8 +42,7 @@ import ProtectedRoute from "./auth/ProtectedRoute.jsx";
 import UserLogin from "./auth/UserLogin.jsx";
 import Privacy from "./Components/Privacy.jsx";
 import Terms from "./Components/Terms.jsx";
-
-import ContraVerfication from "./Components/ContraVerfication.jsx";
+import ContraVerification from "./Components/ContraVerification.js";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -62,7 +61,7 @@ const router = createBrowserRouter([
       { path: "privacy-policy", element: <Privacy /> },
       {
         path: "contra-verification",
-        element: <ContraVerfication />,
+        element: <ContraVerification />,
       },
       { path: "terms-and-condition", element: <Terms /> },
 
